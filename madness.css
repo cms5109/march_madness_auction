@@ -1,0 +1,81 @@
+body {
+	background-color: #CCCCE0;
+	font-family: "Tahoma";
+	color: white;
+}
+
+div {
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+.content {
+	padding:15px;
+	background-color: #000033;
+	border: 1px solid black;
+    border-radius: 25px;
+    box-shadow: 10px 10px 5px #888888;
+    text-align: center;
+    width:80%;
+    margin:auto;
+}
+
+#content_bid {
+	
+	background-color: #000033;
+	border: 1px solid black;
+    border-radius: 25px;
+    box-shadow: 10px 10px 5px #888888;
+    text-align: center;
+    width:80%;
+    font-size:12pt;
+    margin:auto;
+    margin-top:20px;
+    color:#B2B2D1;
+}
+
+#teamimage_div {
+	text-align: center;
+}
+#teamimage_div img {
+	width:50%;
+	border: 1px solid black;
+    border-radius: 25px;
+}
+
+#teamname {
+	font-weight: bold;
+	font-size: 25pt;
+	font-style: normal;
+}
+#teamregion, #teamseed {
+	font-size: 20pt;
+	font-style: italic;
+}
+
+#teamopponent, #teamopponentseed {
+	font-weight: bold;
+	font-style: italic;
+}
+
+#teamopponentseed {
+	vertical-align: super;
+}
+
+#highestbidder, #bidamount {
+	font-weight:bold;
+	color:white;
+}
+.section_header {
+	font-weight: bold;
+	font-size: 30pt;
+	text-align:left;
+	color:#000;
+}
+
+#lastteamimage {
+	width: 20%;
+	border: 1px solid black;
+    border-radius: 10px;
+    float:left;
+}
