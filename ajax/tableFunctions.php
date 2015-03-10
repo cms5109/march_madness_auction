@@ -24,7 +24,7 @@ function build_table($fileName) {
 	}
 
 	// Define keys
-	$keys = range(0, count($team)-1);
+	$keys = range(0, count($team) - 1);
 	
 	// Allocate arrays
 	$table = array( "team"    => array_combine($keys, $team),
@@ -32,7 +32,8 @@ function build_table($fileName) {
 					"seed"	  => array_combine($keys, $seed),
 					"image"	  => array_combine($keys, $image),
 					"color"	  => array_combine($keys, $color),
-					"initBid" => array_combine($keys, array_fill(1, count($team),0)),
+					"initBid" => array_combine($keys, array_fill(0, count($team), 0) ),
+					"opp_key" => array_combine($keys, array_fill(0, count($team), 0) ),
 						);
 	// Fill initial bids based on scale
 	foreach($table["seed"] as $key => $value) {
@@ -48,6 +49,17 @@ function build_table($fileName) {
 			$table["initBid"][$key] = "\$1";
 		} // end if-else
 	} // end foreach
+
+	// Fill opponent key
+	foreach($table["seed"] as $key => $value) {
+		$opp_seed = 17 - $value;
+		$opp_seed_key_array = array_keys($table["seed"], $opp_seed);
+		foreach($opp_seed_key_array as $opp_seed_key) {
+			if ($table["region"][$key] == $table["region"][$opp_seed_key]) {
+				$table["opp_key"][$key] = $opp_seed_key;
+			}
+		}
+	}
 	
 	return $table;
 } // end function buildTable

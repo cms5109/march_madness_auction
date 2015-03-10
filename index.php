@@ -1,3 +1,6 @@
+<?php
+require('ajax/header.php');
+?>
 <!DOCTYPE html>
 <html>
 <body>
@@ -16,10 +19,10 @@
 	</div>
 	<div id="teamname_div">
 		<div> 
+			<span id="teamseed">#1</span>
 			<span id="teamname">The University of North Carolina at Chapel Hill</span>
 		</div>
 		<div>
-			<span id="teamseed">#1</span>
 			<span id="teamregion">South West</span>
 		</div>
 		<div>
@@ -41,37 +44,36 @@
 			Chad Spensky
 		</span>
 	</div>
-
-	<div style="clear:both"></div>
 	<form name="bidform" id="bidform" action="ajax/bid.php" method="POST">
 	    <div>
-	    	<span style="width:50%;text-align:right;">Your Name: 
-		    </span>
-		    <input type="text" name="name" value =""/> <br/>
+	    	<span style="">You are bidding as </span>
+		    <span style="font-weight:bold"><?php echo $_SESSION['user']; ?></span>
 		</div>
 		<div>
-		    <span style="width:50%;text-align:right;">Your Bid: 
+		    <span style="">Your Bid: 
 		    </span>
-	    	<input type="text" name="amount" value ="" /> <br/>
+	    	<input type="text" name="amount" value ="" size="4" maxlength="4" /> <br/>
 	    </div>
-	    <input type="hidden" name="team_id" value="1"/>
 	    <input type="submit" value="Place your bid"/>
 	</form>
 </div>
-<div class="section_header">
+<div class="section_header" style="margin-top:2%">
 	Previous result:
 </div>
-<div class="content">
-	<img id="lastteamimage" src="http://alphasigmaphi.org/Websites/alphasigmaphihq/images/School_Logos/unc-chapel-hill-logo.jpg"/>
-	<div style="margin-top:5%">
-		<span id="lastteamname">Blah U</span>
-		<br/>
-		Winning bidder: 
-		<span id="lastbidder">Chad</span> 
-		for 
-		<span id="lastbidamount">$500</span>
+
+<div class="content" id="previous_team">
+	<div style="width:30%;float:left;">
+		<img id="previousteamimage" src="http://alphasigmaphi.org/Websites/alphasigmaphihq/images/School_Logos/unc-chapel-hill-logo.jpg"/>
 	</div>
-	<div style="clear:both"></div>
+	<div style="width:70%;float:left;margin-top:3%">
+		<span id="previousteam">Blah U</span>
+		<br/>
+		Winning Bid: 
+		<span id="previoushighestbidder">Chad</span> 
+		for 
+		<span id="previousbidamount">$500</span>
+	</div>
+	<div style="clear:both;padding:0;margin:0;"></div>
 </div>
 
 <script src="js/scripts.js"></script>

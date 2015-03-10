@@ -4,6 +4,17 @@ ini_set('display_errors', 1);
 
 session_start();
 
+if (!array_key_exists('user',$_SESSION)) {
+	if (isset($_GET) && array_key_exists('user',$_GET)) {
+		$user = $_GET['user'];
+		$_SESSION['user'] = $user;
+	} else {
+		echo "<center>You must login first.";
+		echo '<form><input name="user"><BR><input type="submit"></form>';
+		exit;
+	}
+}
+
 // Mysql stuff
 $servername = "localhost";
 $sql_user = "march";
@@ -61,7 +72,24 @@ function db_get_current_bid($team_id) {
 function db_get_current_team_id() {
 	global $sql_table_team;
 
-	$sql = "SELECT team_id from $sql_table_team ORDER BY timestamp DESC";
+	$sql = "SELECT team_id from $sql_table_team ORDER BY timestamp DESC LIMIT 1";
+
+	// Figure out the current bid
+	$result = mysql_query($sql) or die('{"status": 0, "msg":"Error getting the current team id. ('.mysql_error().'"}');
+
+	if (mysql_num_rows($result) == 0) {
+		return -1;
+	}
+	// extract our results
+	$row = mysql_fetch_array($result);
+	return intval($row['team_id']);
+}
+
+// Return the previous team id
+function db_get_previous_team_id() {
+	global $sql_table_team;
+
+	$sql = "SELECT team_id from $sql_table_team ORDER BY timestamp DESC LIMIT 1,1";
 
 	// Figure out the current bid
 	$result = mysql_query($sql) or die('{"status": 0, "msg":"Error getting the current team id. ('.mysql_error().'"}');

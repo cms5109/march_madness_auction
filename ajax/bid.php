@@ -3,10 +3,8 @@ require('header.php');
 
 // Sanitize input
 if (!isset($_POST) || 
-	!array_key_exists('name', $_POST) || 
-	!array_key_exists('amount', $_POST) || 
-	!array_key_exists('team_id', $_POST)) {
-	echo '{"status": 0, "msg":"Invalid form submission.  Name, Amount, and Team ID are all required to place a bid."}';
+	!array_key_exists('amount', $_POST)) {
+	echo '{"status": 0, "msg":"Invalid form submission.  Amount is required."}';
 	exit;
 }
 
@@ -19,7 +17,7 @@ db_connect();
 db_lock();
 
 // Get our data to write to the table
-$name = @mysql_real_escape_string($_POST['name']);
+$name = $_SESSION['user'];
 $amount = @mysql_real_escape_string($_POST['amount']);
 $team_id = db_get_current_team_id();
 

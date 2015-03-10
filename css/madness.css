@@ -48,9 +48,12 @@ div {
 	font-size: 25pt;
 	font-style: normal;
 }
-#teamregion, #teamseed {
+#teamseed {
 	font-size: 20pt;
-	font-style: italic;
+	font-weight: bold;
+}
+#teamregion {
+	font-size: 20pt;
 }
 
 #teamopponent, #teamopponentseed {
@@ -58,13 +61,14 @@ div {
 	font-style: italic;
 }
 
-#teamopponentseed {
+#teamopponentseed, #teamseed {
 	vertical-align: super;
 }
 
 #highestbidder, #bidamount {
 	font-weight:bold;
 	color:white;
+	font-size: 130%;
 }
 .section_header {
 	font-weight: bold;
@@ -73,9 +77,22 @@ div {
 	color:#000;
 }
 
-#lastteamimage {
-	width: 20%;
+#previousteamimage {
+	width: 70%;
 	border: 1px solid black;
     border-radius: 10px;
-    float:left;
+}
+
+#previousteam {
+	font-size: 20pt;
+	font-weight: bold;
+}
+#previoushighestbidder, #previousbidamount {
+	font-weight:bold;
+}
+#bidform input {
+	font-size: 18pt;
+}
+#bidform {
+	padding:2%;
 }

@@ -25,18 +25,34 @@ $("#bidform").submit(function(e)
 });
  
 
+var lastData = "";
 function updatePage(data) {
     json = JSON.parse(data);
 
+    if (data == lastData) {
+        return;
+    }
+    lastData = data;
     $('#teamimage').attr("src",json['teamimage']);
     $('#teamname').html(json['teamname']);
     $('#teamregion').html(json['teamregion']);
     $('#teamseed').html(json['teamseed']);
     $('#teamopponent').html(json['teamopponent']);
+    $('#teamopponentseed').html(json['teamopponentseed']);
     $('#bidamount').html(json['bidamount']);
     $('#highestbidder').html(json['highestbidder']);
 
     $('#main_team').css('background-color',json['teamcolor']);
+
+    $('#previousteamimage').attr("src",json['previousteamimage']);
+    $('#previousteam').html(json['previousteam']);
+    $('#previousbidamount').html(json['previousbidamount']);
+    $('#previoushighestbidder').html(json['previoushighestbidder']);
+
+    $('#previous_team').css('background-color',json['previousteamcolor']);
+
+    $("#content_bid").fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+
 }
 
 function ajax_update(params) {
