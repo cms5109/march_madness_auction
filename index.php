@@ -1,13 +1,10 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html>
 <body>
 <head>
 	<title>March Madness Auction</title>
-	<script src="jquery-1.11.2.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="madness.css">
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/madness.css">
 </head>
 
 <div class="section_header">
@@ -77,6 +74,6 @@ session_start();
 	<div style="clear:both"></div>
 </div>
 
-<script src="scripts.js"></script>
+<script src="js/scripts.js"></script>
 </body>
 </html>

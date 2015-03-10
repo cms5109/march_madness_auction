@@ -10,9 +10,9 @@ if (!isset($_POST) ||
 	exit;
 }
 // Get our data to write to the table
-$name = $_POST['name'];
-$amount = $_POST['amount'];
-$team_id = $_POST['team_id'];
+$name = mysql_real_escape_string($_POST['name']);
+$amount = mysql_real_escape_string($_POST['amount']);
+$team_id = mysql_real_escape_string($_POST['team_id']);
 
 //
 //	Start our bid code
