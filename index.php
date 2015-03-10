@@ -10,7 +10,7 @@
 <div class="section_header">
 	Up for auction:
 </div>
-<div class="content">
+<div class="content" id="main_team">
 	<div id="teamimage_div">
 		<img src="http://alphasigmaphi.org/Websites/alphasigmaphihq/images/School_Logos/unc-chapel-hill-logo.jpg" id="teamimage"/>
 	</div>

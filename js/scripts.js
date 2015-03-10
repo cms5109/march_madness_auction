@@ -11,7 +11,7 @@ $("#bidform").submit(function(e)
         success:function(data, textStatus, jqXHR) 
         {
             json = JSON.parse(data);
-            alert(json['msg']);
+            alert(json["msg"]);
             //data: return data from server
         },
         error: function(jqXHR, textStatus, errorThrown) 
@@ -35,6 +35,8 @@ function updatePage(data) {
     $('#teamopponent').html(json['teamopponent']);
     $('#bidamount').html(json['bidamount']);
     $('#highestbidder').html(json['highestbidder']);
+
+    $('#main_team').css('background-color',json['teamcolor']);
 }
 
 function ajax_update(params) {

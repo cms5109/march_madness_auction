@@ -5,10 +5,10 @@ include('tableFunctions.php');
 $teamInfo = build_table("../teamInfo.csv");
 $sync_value = get_sync_value();
 
-if (array_key_exists('sync_value',$_SESSION) && $_SESSION['sync_value'] == $sync_value) {
-	echo "";
-	exit;
-}
+// if (array_key_exists('sync_value',$_SESSION) && $_SESSION['sync_value'] == $sync_value) {
+// 	echo "";
+// 	exit;
+// }
 
 db_connect();
 
@@ -21,12 +21,13 @@ if ($team_id == -1) {
 } else {
 	$bid = db_get_current_bid($team_id);
 	echo '{	
-			"teamimage":"'.$teamInfo['image'][$team_id].'",
+			"teamimage":"teamImages/'.$teamInfo['image'][$team_id].'",
 			"teamname":"'.$teamInfo['team'][$team_id].'",
 			"teamregion":"'.$teamInfo['region'][$team_id].'",
 			"teamseed":"'.$teamInfo['seed'][$team_id].'",
-			"teamopponent":"'.$teamInfo['team'][$opponent_id].'",
-			"teamopponentseed":"'.$teamInfo['seed'][$opponent_id].'",
+			"teamopponent":"'.$teamInfo['team'][$team_id].'",
+			"teamopponentseed":"'.$teamInfo['seed'][$team_id].'",
+			"teamcolor":"'.$teamInfo['color'][$team_id].'",
 			"bidamount":"$'.$bid['amount'].'",
 			"highestbidder":"'.$bid['name'].'"
 		}';

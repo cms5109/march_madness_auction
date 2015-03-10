@@ -14,6 +14,8 @@ $sql_table_team = "current_team";
 
 // Syncronization stuff
 $sync_file = "/var/www/marchmadness/sync_file";
+$sync_file = "/Users/Shortman/projects/march_madness_auction/sync_file";
+
 
 // Bid specific stuff
 $BID_INCREMENT = 1;
@@ -21,11 +23,9 @@ $BID_INCREMENT = 1;
 // Create connection
 function db_connect() {
 	global $sql_user, $sql_pass, $sql_db, $sql_table_bid;
-	$link = mysql_connect('localhost', $sql_user, $sql_pass)
+	$link = @mysql_connect('localhost', $sql_user, $sql_pass)
 	    or die('Could not connect: ' . mysql_error());
 	mysql_select_db($sql_db) or die('Could not select database');
-	// Session info
-	session_start();
 }
 
 // Close our connection
@@ -64,7 +64,7 @@ function db_get_current_team_id() {
 	$sql = "SELECT team_id from $sql_table_team ORDER BY timestamp DESC";
 
 	// Figure out the current bid
-	$result = mysql_query($sql) or die('{"status": 0, "msg":"Error getting the current team id."}');
+	$result = mysql_query($sql) or die('{"status": 0, "msg":"Error getting the current team id. ('.mysql_error().'"}');
 
 	if (mysql_num_rows($result) == 0) {
 		return -1;

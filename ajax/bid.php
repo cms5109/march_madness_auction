@@ -9,10 +9,6 @@ if (!isset($_POST) ||
 	echo '{"status": 0, "msg":"Invalid form submission.  Name, Amount, and Team ID are all required to place a bid."}';
 	exit;
 }
-// Get our data to write to the table
-$name = mysql_real_escape_string($_POST['name']);
-$amount = mysql_real_escape_string($_POST['amount']);
-$team_id = mysql_real_escape_string($_POST['team_id']);
 
 //
 //	Start our bid code
@@ -21,6 +17,11 @@ $team_id = mysql_real_escape_string($_POST['team_id']);
 // Open and lock or SQL connection
 db_connect();
 db_lock();
+
+// Get our data to write to the table
+$name = @mysql_real_escape_string($_POST['name']);
+$amount = @mysql_real_escape_string($_POST['amount']);
+$team_id = db_get_current_team_id();
 
 // Get the current bid
 $current_bid = db_get_current_bid($team_id);
@@ -43,7 +44,5 @@ if ($current_bid['name'] == $name) {
 }
 
 db_close();
-
-session_write_close();
 
 ?>
