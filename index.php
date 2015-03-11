@@ -9,12 +9,14 @@ require('ajax/header.php');
 	<link rel="stylesheet" type="text/css" href="css/madness.css">
 </head>
 <body>
+<audio id="sound_buzzer" src="sounds/buzzer_x.wav" preload="auto"></audio>
+<audio id="sound_cash" src="sounds/cash_register_x.wav" preload="auto"></audio>
 <div class="section_header">
 	Up for auction:
 </div>
 <div class="content" id="main_team">
 	<div id="teamimage_div">
-		<img src="http://www.cbsaltitudegroup.com/wp-content/uploads/2014/03/march_madness.jpg" id="teamimage"/>
+		<img src="teamImages/filler.jpg" id="teamimage"/>
 	</div>
 	<div id="teamname_div">
 		<div> 
@@ -72,5 +74,8 @@ require('ajax/header.php');
 </div>
 
 <script src="js/scripts.js"></script>
+<div id="footer">
+	Created by <a href="https://github.com/cspensky/march_madness_auction">Chad</a><BR>
+</div>
 </body>
 </html>

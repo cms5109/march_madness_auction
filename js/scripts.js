@@ -43,8 +43,10 @@ function updatePage(data) {
         $("#main_team").fadeOut(0).fadeIn(1000);
         $("#content_bid").fadeOut(0).fadeIn(1000);
         $("#previous_team").fadeOut(0);
+        document.getElementById('sound_buzzer').play();
     } else {
         $("#content_bid").fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+        document.getElementById('sound_cash').play();
     }
     current_team = json['teamname'];
 
