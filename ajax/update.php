@@ -1,15 +1,14 @@
 <?php
 require('header.php');
-include('tableFunctions.php');
-
-$teamInfo = build_table("../teamInfo.csv");
+include('team_array.php');
 $sync_value = get_sync_value();
 
-// if (array_key_exists('sync_value',$_SESSION) && $_SESSION['sync_value'] == $sync_value) {
-// 	echo "";
-// 	exit;
-// }
+if (array_key_exists('sync_value',$_GET) && $_GET['sync_value'] == $sync_value) {
+	echo "";
+	exit;
+}
 
+// $teamInfo = build_table("../teamInfo.csv");
 db_connect();
 
 $team_id = db_get_current_team_id();
@@ -38,8 +37,9 @@ if ($team_id == -1) {
 			"previousteam":"'.$teamInfo['team'][$previous_team_id].'",
 			"previousteamcolor":"'.$teamInfo['color'][$previous_team_id].'",
 			"previousbidamount":"$'.$previous_bid['amount'].'",
-			"previoushighestbidder":"'.$previous_bid['name'].'"
+			"previoushighestbidder":"'.$previous_bid['name'].'",
 
+			"sync_value":"'.$sync_value.'"
 		}';
 }
 

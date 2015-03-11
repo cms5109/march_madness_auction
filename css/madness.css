@@ -2,6 +2,7 @@ body {
 	background-color: #CCCCE0;
 	font-family: "Tahoma";
 	color: white;
+	padding-bottom:3%;
 }
 
 div {
@@ -19,6 +20,7 @@ div {
     width:80%;
     margin:auto;
 }
+
 
 #content_bid {
 	
@@ -92,7 +94,73 @@ div {
 }
 #bidform input {
 	font-size: 18pt;
+	text-align:center;
 }
 #bidform {
 	padding:2%;
+}
+#bidbutton {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 12pt;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+  margin-top:20px;
+}
+
+#bidbutton:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+
+#results_table {
+	border: solid 1px black;
+	width:98%;
+	margin:auto;
+	border-collapse: collapse;
+	border: 1px solid black;
+    
+}
+
+#results_table td,th {
+	padding:1%;
+}
+#results_table th {
+	background:#B2B2D1;
+	color:#000;
+	border-bottom: solid 1px black;
+}
+#results_table td {
+	border-bottom: solid 1px #B2B2D1;
+	background:#D6E0FF;
+	color:#000;
+}
+
+#pot_amount {
+	margin-top :2%;
+	margin-bottom:1%;
+	width:40%;
+	margin-left:auto;
+	margin-right:auto;
+	font-size:20pt;
+	text-align: center;
+	border: solid 1px #B2B2D1;
+	background:#D6E0FF;
+	border-radius: 10px;
+	color: #000;
 }

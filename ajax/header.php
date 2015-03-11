@@ -1,6 +1,6 @@
 <?php
-error_reporting (E_ALL);
-ini_set('display_errors', 1);
+// error_reporting (E_ALL);
+// ini_set('display_errors', 1);
 
 session_start();
 
@@ -106,8 +106,24 @@ function db_get_previous_team_id() {
 function db_update_current_team($team_id) {
 	global $sql_table_team; 
 
-	$sql = "INSERT INTO $sql_table_team (team_id) VALUES ('$teamid')";
+	$sql = "INSERT INTO $sql_table_team (team_id) VALUES ('$team_id')";
 	mysql_query($sql) or die('Query failed: ' . mysql_error());
+}
+
+// Return used teams
+function db_get_bid_teams() {
+	global $sql_table_team; 
+
+	$sql = "SELECT DISTINCT(team_id)  from $sql_table_team ORDER BY timestamp DESC";
+	$result = mysql_query($sql) or die('Query failed: ' . mysql_error());
+
+	// Add of the team ids to an array and return it
+	$rtn_array = Array();
+	while ($row = mysql_fetch_array($result)) {
+		array_push($rtn_array, intval($row['team_id']));
+	}
+
+	return $rtn_array;
 }
 
 // Insert a bid into the table

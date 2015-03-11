@@ -26,13 +26,28 @@ $("#bidform").submit(function(e)
  
 
 var lastData = "";
+var sync_value = -1;
+var current_team = "";
 function updatePage(data) {
-    json = JSON.parse(data);
 
-    if (data == lastData) {
+    // Don't do unecessary work
+    if (data == lastData || data == "") {
         return;
     }
     lastData = data;
+
+    json = JSON.parse(data);
+    
+
+    if (current_team != json['teamname']) {
+        $("#main_team").fadeOut(0).fadeIn(1000);
+        $("#content_bid").fadeOut(0).fadeIn(1000);
+        $("#previous_team").fadeOut(0);
+    } else {
+        $("#content_bid").fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+    }
+    current_team = json['teamname'];
+
     $('#teamimage').attr("src",json['teamimage']);
     $('#teamname').html(json['teamname']);
     $('#teamregion').html(json['teamregion']);
@@ -44,6 +59,9 @@ function updatePage(data) {
 
     $('#main_team').css('background-color',json['teamcolor']);
 
+    if (json['previousteam'] != "") {
+        $("#previous_team").fadeIn(1000);
+    }
     $('#previousteamimage').attr("src",json['previousteamimage']);
     $('#previousteam').html(json['previousteam']);
     $('#previousbidamount').html(json['previousbidamount']);
@@ -51,8 +69,9 @@ function updatePage(data) {
 
     $('#previous_team').css('background-color',json['previousteamcolor']);
 
-    $("#content_bid").fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+    
 
+    sync_value = json['sync_value'];
 }
 
 function ajax_update(params) {
@@ -68,6 +87,7 @@ function update_forever() {
 }
 
 $( document ).ready(function() {
+    $("#previous_team").fadeOut(100);
     ajax_update({});
-    setInterval(function () { ajax_update({}); }, 1000);
+    setInterval(function () { ajax_update({sync_value: sync_value}); }, 1000);
 });
