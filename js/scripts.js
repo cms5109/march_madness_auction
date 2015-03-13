@@ -21,7 +21,7 @@ $("#bidform").submit(function(e)
         }
     });
     e.preventDefault(); //STOP default action
-    e.unbind(); //unbind. to stop multiple form submit.
+    //e.unbind(); //unbind. to stop multiple form submit.
 });
 
 // Make an AJAX call to advance to next auction team
