@@ -497,5 +497,6 @@ $userInfo = array (
   'jeromesicard@yahoo.fr' => 'Jerome Sicard',
   'norispasic@gmail.com' => 'Noris Pasic',
   'kirkpmiles@gmail.com' => 'Kirk Miles',
+  'abajaria@gmail.com' => 'Ajay Bajaria',
 );
 ?>

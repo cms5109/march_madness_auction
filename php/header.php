@@ -25,7 +25,7 @@ function fail($msg) {
 	if ($msg != "") {
 		echo '<div style="font-weight:bold;color:red;margin:2%">'.$msg.'</div>';
 	}
-	echo "Please enter your e-mail addres below:";
+	echo "Please enter your e-mail address below:";
 	echo '<form><input name="user_email"><BR><input type="submit"></form>';
 	echo '</body>';
 	exit;
@@ -155,7 +155,7 @@ function db_update_bid($team_id, $name, $amount) {
 
 	// Remove any crap from amount (e.g. $)
 	$amount = intval($amount);
-	
+
 	$sql = "INSERT INTO $sql_table_bid (team_id, name, amount)
 	VALUES ('$team_id', '$name', '$amount')";
 	mysql_query($sql) or die('db_update_bid failed: ' . mysql_error());
