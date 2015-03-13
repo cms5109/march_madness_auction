@@ -45,7 +45,7 @@ if ($team_id == -1) {
 		echo '
 			"previousteamimage":"",
 			"previousteam":"",
-			"previousteamcolor":"",'
+			"previousteamcolor":"",
 			"previousbidamount":"",
 			"previoushighestbidder":""';
 	}
