@@ -16,6 +16,7 @@ db_connect();
 $team_id = db_get_current_team_id();
 if ($team_id == -1) {
 	echo "";
+	exit;
 }
 // Get the id of their opponent
 $opponent_id = $teamInfo['opp_key'][$team_id];
