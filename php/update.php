@@ -21,8 +21,9 @@ if ($team_id == -1) {
 	echo "";
 } else {
 	$bid = db_get_current_bid($team_id);
-	$previous_bid = db_get_current_bid($previous_team_id);
+	
 	echo '{	
+			"sync_value":"'.$sync_value.'",
 			"teamimage":"teamImages/'.$teamInfo['image'][$team_id].'",
 			"teamname":"'.$teamInfo['team'][$team_id].'",
 			"teamregion":"'.$teamInfo['region'][$team_id].' Region",
@@ -31,16 +32,26 @@ if ($team_id == -1) {
 			"teamopponentseed":"#'.$teamInfo['seed'][$opponent_id].'",
 			"teamcolor":"'.$teamInfo['color'][$team_id].'",
 			"bidamount":"$'.$bid['amount'].'",
-			"highestbidder":"'.$bid['name'].'",
-
+			"highestbidder":"'.$bid['name'].'",';
+	if ($previous_team_id != -1) {
+		$previous_bid = db_get_current_bid($previous_team_id);
+		echo '
 			"previousteamimage":"teamImages/'.$teamInfo['image'][$previous_team_id].'",
 			"previousteam":"'.$teamInfo['team'][$previous_team_id].'",
 			"previousteamcolor":"'.$teamInfo['color'][$previous_team_id].'",
 			"previousbidamount":"$'.$previous_bid['amount'].'",
-			"previoushighestbidder":"'.$previous_bid['name'].'",
+			"previoushighestbidder":"'.$previous_bid['name'].'"';
+	} else {
+		echo '
+			"previousteamimage":"",
+			"previousteam":"",
+			"previousteamcolor":"",'
+			"previousbidamount":"",
+			"previoushighestbidder":""';
+	}
 
-			"sync_value":"'.$sync_value.'"
-		}';
+			
+	echo '}';
 }
 
 
