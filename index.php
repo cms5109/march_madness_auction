@@ -1,5 +1,5 @@
 <?php
-require('ajax/header.php');
+require('php/header.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,7 +14,7 @@ require('ajax/header.php');
 <div class="section_header">
 	Up for auction:
 </div>
-<div class="content" id="main_team">
+<div class="content" id="main_team" style="background-color:#fff">
 	<div id="teamimage_div">
 		<img src="teamImages/filler.jpg" id="teamimage"/>
 	</div>
@@ -41,10 +41,10 @@ require('ajax/header.php');
 	<div style="float:right;width:49%">
 		Highest Bidder: <span id="highestbidder"></span>
 	</div>
-	<form name="bidform" id="bidform" action="ajax/bid.php" method="POST">
+	<form name="bidform" id="bidform" action="php/bid.php" method="POST">
 	    <div>
 	    	<span style="">You are bidding as </span>
-		    <span style="font-weight:bold"><?php echo $_SESSION['user']; ?></span>
+		    <span style="font-weight:bold"><?php echo $_SESSION['user_name']; ?></span>
 		</div>
 		<div>
 		    <span style="font-size:18pt;">$ 
@@ -74,7 +74,14 @@ require('ajax/header.php');
 </div>
 
 <script src="js/scripts.js"></script>
+
+
 <div id="footer">
+<?php
+if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) {
+	echo "<button style='margin:1%;font-size:18pt;font-weight:bold;' onclick='nextTeam();'>Next Team</button><BR>";
+}
+?>
 	Created by <a href="https://github.com/cspensky/march_madness_auction">Chad</a><BR>
 </div>
 </body>

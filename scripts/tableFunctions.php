@@ -1,4 +1,19 @@
 <?php
+
+// Build our access control list from CSV file.
+function build_acl($filename) {
+	$userInfo = Array();
+	if (($handle = fopen($filename, "r")) !== FALSE) {
+    	while (($data = fgetcsv($handle)) !== FALSE) {
+    		$name = $data[0];
+    		$email = $data[1];
+    		$userInfo[$email] = $name;
+    	}
+    }
+    return $userInfo;
+}
+
+// Extract team info from CSV file
 function build_table($fileName) {
 	
 	// Allocate table arrays

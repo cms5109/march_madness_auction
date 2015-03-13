@@ -23,11 +23,19 @@ $("#bidform").submit(function(e)
     e.preventDefault(); //STOP default action
     e.unbind(); //unbind. to stop multiple form submit.
 });
+
+// Make an AJAX call to advance to next auction team
+function nextTeam() {
+    $.get('php/next_team.php', {}, function(data){
+            alert(data);
+        }, 'html');
+}
  
 
 var lastData = "";
 var sync_value = -1;
 var current_team = "";
+// Update the page with the current state of the auction
 function updatePage(data) {
 
     // Don't do unecessary work
@@ -76,18 +84,14 @@ function updatePage(data) {
     sync_value = json['sync_value'];
 }
 
+// Do an AJAX update of the page
 function ajax_update(params) {
-    $.get('ajax/update.php', params, function(data){
+    $.get('php/update.php', params, function(data){
             updatePage(data);
         }, 'html');
 }
 
-function update_forever() {
-    while (1) {
-        ajax_update({wait: 1});
-    }
-}
-
+// On load, do an initial update then set a timer to update every X seconds
 $( document ).ready(function() {
     $("#previous_team").fadeOut(100);
     ajax_update({});

@@ -17,7 +17,7 @@ db_connect();
 db_lock();
 
 // Get our data to write to the table
-$name = $_SESSION['user'];
+$name = $_SESSION['user_name'];
 $amount = @mysql_real_escape_string($_POST['amount']);
 $team_id = db_get_current_team_id();
 

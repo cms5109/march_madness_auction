@@ -1,6 +1,6 @@
 <?php
-require('ajax/header.php');
-require('ajax/team_array.php');
+require('php/header.php');
+require('php/static_arrays.php');
 
 db_connect();
 
@@ -35,8 +35,8 @@ foreach ($bid_teams as $team_id) {
 	$bid_winner = db_get_current_bid($team_id);
 	echo "<tr>";
 	echo "<td>".$teamInfo['seed'][$team_id]."</td>";
-	echo "<td>".$teamInfo['team'][$team_id]."</td>";
 	echo "<td>".$teamInfo['region'][$team_id]."</td>";
+	echo "<td>".$teamInfo['team'][$team_id]."</td>";
 	echo "<td>".$bid_winner['name']."</td>";
 	echo "<td>$".$bid_winner['amount']."</td>";
 	echo "</tr>";

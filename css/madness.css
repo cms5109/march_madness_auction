@@ -2,7 +2,6 @@ body {
 	background-color: #CCCCE0;
 	font-family: "Tahoma";
 	color: white;
-	padding-bottom:3%;
 }
 
 div {
@@ -167,6 +166,7 @@ div {
 
 
 #footer {
+	margin-top:3%;
 	font-size:8pt;
 	text-align:center;
 	color:#000;

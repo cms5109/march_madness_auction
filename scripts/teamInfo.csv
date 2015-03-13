@@ -1,39 +1,65 @@
-Pennsylvania State University,42,Home,PSU.png,#0B0B61
-Southern Methodist University,6,South,SMU.png,#FF0000
-University of Cincinnati,8,Midwest,UCincy.png,#000000
-Virginial Commonwealth University,10,East,VCU.png,#FACC2E
-University of Dayton,9,East,Dayton.png,#FF0000
-Duke University,1,South,Duke.png,#0101DF
-University of Virginia,1,East,UVa.png,#FE642E
-University of North Carolina,5,Midwest,UNC.png,#81BEF7
-University of Louisville,4,West,Lville.png,#DF0101
-Notre Dame University,3,Midwest,ND.png,#868A08
-North Carolina State University,9,Midwest,NCSt.png,#FF0000
-Kansas University,2,East,Kansas.png,#0040FF
-Baylor University,4,East,Baylor.png,#0B610B
-Iowa State University,3,South,ISU.png,#B40404
-Oklahoma University,3,West,Okla.png,#8A0808
-West Virginia University,5,West,WVU.png,#0B2161
-Villanova University,1,West,Nova.png,#2ECCFA
-Georgetown University,6,East,Gtown.png,#A4A4A4
-Providence College,6,West,Prov.png,#170B3B
-Butler University,6,Midwest,Butler.png,#170B3B
-St. John's University,8,East,StJohns.png,#DF013A
-University of Wisconsin,2,Midwest,Wisky.png,#DF0101
-University of Maryland,3,East,UMd.png,#DF0101
-Michigan State University,7,West,MichSt.png,#0B6121
-University of Iowa,7,East,Iowa.png,#000000
-Ohio State University,8,West,OhSt.png,#B40404
-San Diego State University,7,South,SDSU.png,#000000
-University of Arizona,2,West,Zona.png,#0B2161
-University of Utah,4,South,Utah.png,#DF0101
-University of Kentucky,1,Midwest,UK.png,#2E2EFE
-University of Arkansas,5,East,UArk.png,#8A0808
-University of Georgia,9,West,UGa.png,#000000
-Gonzaga University,2,West,Zaga.png,#0B2161
-University of Northern Iowa,4,Midwest,UNI.png,#4B088A
-Wichita State University,5,South,WichSt.png,#000000
-University of North Florida,16,East,UNFla.png,#A4A4A4
-Coastal Carolina University,16,South,CCU.png,#088A85
-Belmont University,15,South,Belmont.png,#0B3861
-,,,,
+Pennsylvania State University,42,Home,PSU.png,#002654
+Southern Methodist University,1,Midwest,SMU.png,#CE1126
+University of Cincinnati,2,Midwest,UCincy.png,#000000
+Virginia Commonwealth University,3,Midwest,VCU.png,#F8B800
+University of Dayton,4,Midwest,Dayton.png,#CE1141
+Duke University,5,Midwest,Duke.png,#001A57
+University of Virginia,6,Midwest,UVa.png,#003F87
+University of North Carolina,7,Midwest,UNC.png,#56A0D3
+University of Louisville,8,Midwest,Lville.png,#AD0000
+Notre Dame University,9,Midwest,ND.png,#002B5B
+North Carolina State University,10,Midwest,NCSt.png,#CC0000
+Kansas University,11,Midwest,Kansas.png,#0022B4
+Baylor University,12,Midwest,Baylor.png,#2B4C3F
+Iowa State University,13,Midwest,ISU.png,#CC0000
+Oklahoma University,14,Midwest,Okla.png,#660000
+West Virginia University,15,Midwest,WVU.png,#002855
+Villanova University,16,Midwest,Nova.png,#003366
+Georgetown University,1,South,Gtown.png,#011E41
+Providence College,2,South,Prov.png,#FFFFFF
+Butler University,3,South,Butler.png,#000000
+St. John's University,4,South,StJohns.png,#DD1A32
+University of Wisconsin,5,South,Wisky.png,#B70101
+University of Maryland,6,South,UMd.png,#CE1126
+Michigan State University,7,South,MichSt.png,#18453B
+University of Iowa,8,South,Iowa.png,#000000
+Ohio State University,9,South,OhSt.png,#BB0000
+San Diego State University,10,South,SDSU.png,#000000
+University of Arizona,11,South,Zona.png,#003366
+University of Utah,12,South,Utah.png,#CC0000
+University of Kentucky,13,South,UK.png,#005DAA
+University of Arkansas,14,South,UArk.png,#9D2235
+University of Georgia,15,South,UGa.png,#CC0000
+Gonzaga University,16,South,Zaga.png,#003366
+University of Northern Iowa,1,West,UNI.png,#4B116F
+Wichita State University,2,West,WichSt.png,#000000
+University of North Florida,3,West,UNFla.png,#00337F
+Coastal Carolina University,4,West,CCU.png,#007073
+Belmont University,5,West,Belmont.png,#002868
+Northeastern University,6,West,NErn.png,#CC0000
+Manhattan College,7,West,Manhtn.png,#147036
+Wofford College,8,West,Woff.png,#E1CAA2
+America East Conference,9,West,NCAA.png,#FFFFFF
+Big Sky Conference,10,West,NCAA.png,#FFFFFF
+Big West Conference,11,West,NCAA.png,#FFFFFF
+Valparaiso University,12,West,Valpo.png,#613318
+Ivy League,13,West,NCAA.png,#FFFFFF
+Mid-American Conference,14,West,NCAA.png,#FFFFFF
+Mid-Eastern Athletic Conference,15,West,NCAA.png,#FFFFFF
+Robert Morris University,16,West,BobMo.png,#14234B
+Lafayette College,1,East,LAF.png,#822433
+Southland Conference,2,East,NCAA.png,#FFFFFF
+North Dakota St. University,3,East,NDSt.png,#006633
+Southwestern Athletic Conference,4,East,NCAA.png,#FFFFFF
+Sun Belt,5,East,NCAA.png,#FFFFFF
+Western Athletic,6,East,NCAA.png,#FFFFFF
+Conference USA,7,East,NCAA.png,#FFFFFF
+Bubble Team1,8,East,NCAA.png,#FFFFFF
+Bubble Team2,9,East,NCAA.png,#FFFFFF
+Bubble Team3,10,East,NCAA.png,#FFFFFF
+Bubble Team4,11,East,NCAA.png,#FFFFFF
+Bubble Team5,12,East,NCAA.png,#FFFFFF
+Bubble Team6,13,East,NCAA.png,#FFFFFF
+Bubble Team7,14,East,NCAA.png,#FFFFFF
+Bubble Team8,15,East,NCAA.png,#FFFFFF
+Bubble Team9,16,East,NCAA.png,#FFFFFF

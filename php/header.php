@@ -1,19 +1,9 @@
 <?php
 // error_reporting (E_ALL);
 // ini_set('display_errors', 1);
+include('static_arrays.php');
 
 session_start();
-
-if (!array_key_exists('user',$_SESSION)) {
-	if (isset($_GET) && array_key_exists('user',$_GET)) {
-		$user = $_GET['user'];
-		$_SESSION['user'] = $user;
-	} else {
-		echo "<center>You must login first.";
-		echo '<form><input name="user"><BR><input type="submit"></form>';
-		exit;
-	}
-}
 
 // Mysql stuff
 $servername = "localhost";
@@ -24,12 +14,45 @@ $sql_table_bid = "bids";
 $sql_table_team = "current_team";
 
 // Syncronization stuff
-$sync_file = "/var/www/marchmadness/sync_file";
-$sync_file = "/Users/Shortman/projects/march_madness_auction/sync_file";
-
+$sync_file = "./sync_file"; // actually in 'php/'
 
 // Bid specific stuff
 $BID_INCREMENT = 1;
+
+// What to display if the user fails authentication
+function fail($msg) {
+	echo '<body style="margin-top:40%;text-align:center;">';
+	if ($msg != "") {
+		echo '<div style="font-weight:bold;color:red;margin:2%">'.$msg.'</div>';
+	}
+	echo "Please enter your e-mail addres below:";
+	echo '<form><input name="user_email"><BR><input type="submit"></form>';
+	echo '</body>';
+	exit;
+}
+
+// Force users to login
+if (!array_key_exists('user_name',$_SESSION)) {
+
+	if (isset($_GET) && array_key_exists('user_email',$_GET)) {
+		$user_email = $_GET['user_email'];
+		$name = check_access($user_email);
+		if ($name === false) {
+			fail("Invalid E-mail.");
+		} else {
+			$_SESSION['user_name'] = $name;
+			$_SESSION['user_email'] = $user_email;
+		}
+	} else {
+		fail("");
+	}
+	// Check to see if this is an admin
+	if ($_SESSION['user_email'] == "cspensky@gmail.com") {
+		$_SESSION['ADMIN'] = true;
+	}
+}
+
+
 
 // Create connection
 function db_connect() {
@@ -107,7 +130,7 @@ function db_update_current_team($team_id) {
 	global $sql_table_team; 
 
 	$sql = "INSERT INTO $sql_table_team (team_id) VALUES ('$team_id')";
-	mysql_query($sql) or die('Query failed: ' . mysql_error());
+	mysql_query($sql) or die('db_update_current_team failed: ' . mysql_error());
 }
 
 // Return used teams
@@ -115,7 +138,7 @@ function db_get_bid_teams() {
 	global $sql_table_team; 
 
 	$sql = "SELECT DISTINCT(team_id)  from $sql_table_team ORDER BY timestamp DESC";
-	$result = mysql_query($sql) or die('Query failed: ' . mysql_error());
+	$result = mysql_query($sql) or die('db_get_bid_teams failed: ' . mysql_error());
 
 	// Add of the team ids to an array and return it
 	$rtn_array = Array();
@@ -130,9 +153,12 @@ function db_get_bid_teams() {
 function db_update_bid($team_id, $name, $amount) {
 	global $sql_table_bid;
 
+	// Remove any crap from amount (e.g. $)
+	$amount = intval($amount);
+	
 	$sql = "INSERT INTO $sql_table_bid (team_id, name, amount)
 	VALUES ('$team_id', '$name', '$amount')";
-	mysql_query($sql) or die('Query failed: ' . mysql_error());
+	mysql_query($sql) or die('db_update_bid failed: ' . mysql_error());
 }
 
 // Update our sync_file
@@ -153,5 +179,16 @@ function get_sync_value() {
 	return $cur_val;
 }
 
+
+// Check to see if this user is in our access list
+function check_access($email) {
+	global $userInfo;
+
+	if (array_key_exists($email, $userInfo)) {
+		return $userInfo[$email];
+	} else {
+		return false;
+	}
+}
 
 ?>

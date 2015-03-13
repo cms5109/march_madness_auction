@@ -1,6 +1,6 @@
 <?php
 require('header.php');
-include('team_array.php');
+include('static_arrays.php');
 $sync_value = get_sync_value();
 
 if (array_key_exists('sync_value',$_GET) && $_GET['sync_value'] == $sync_value) {
