@@ -34,6 +34,7 @@ echo '{
 		"teamopponentseed":"#'.$teamInfo['seed'][$opponent_id].'",
 		"teamcolor":"'.$teamInfo['color'][$team_id].'",
 		"bidamount":"$'.$bid['amount'].'",
+		"bidtime":"$'.$bid['timestamp'].'",
 		"highestbidder":"'.$bid['name'].'",';
 
 // Was there a previous team that was bid on?

@@ -126,6 +126,34 @@ div {
   text-decoration: none;
 }
 
+#clockdiv{
+	font-family: sans-serif;
+	color: #fff
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 30px;
+}
+
+#clockdiv > div{
+	padding: 5px;
+	border-radius: 3px
+	background: #000033;
+	display: inline-block;
+}
+
+#clockdiv div > span{
+	padding: 15px;
+	border-radius: 3px;
+	background: #B2B2D1;
+	display: inline-block;
+	color: #000033;
+}
+
+.smalltext{
+	padding-top: 5px;
+	font-size: 16px;
+}
 
 #results_table {
 	border: solid 1px black;
