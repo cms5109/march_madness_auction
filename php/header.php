@@ -7,7 +7,7 @@ session_start();
 
 // Mysql stuff
 $servername = "localhost";
-$sql_user = "march";
+$sql_user = "root";
 $sql_pass = "madness";
 $sql_db = "marchmadness";
 $sql_table_bid = "bids";
@@ -47,12 +47,10 @@ if (!array_key_exists('user_name',$_SESSION)) {
 		fail("");
 	}
 	// Check to see if this is an admin
-	if ($_SESSION['user_email'] == "cspensky@gmail.com") {
+	if ($_SESSION['user_email'] == "acampbell.psu@gmail.com") {
 		$_SESSION['ADMIN'] = true;
 	}
 }
-
-
 
 // Create connection
 function db_connect() {
@@ -115,7 +113,7 @@ function db_get_previous_team_id() {
 	$sql = "SELECT team_id from $sql_table_team ORDER BY timestamp DESC LIMIT 1,1";
 
 	// Figure out the current bid
-	$result = mysql_query($sql) or die('{"status": 0, "msg":"Error getting the current team id. ('.mysql_error().'"}');
+	$result = mysql_query($sql) or die('{"status": 0, "msg":"Error getting the previous team id. ('.mysql_error().'"}');
 
 	if (mysql_num_rows($result) == 0) {
 		return -1;
@@ -159,6 +157,38 @@ function db_update_bid($team_id, $name, $amount) {
 	$sql = "INSERT INTO $sql_table_bid (team_id, name, amount)
 	VALUES ('$team_id', '$name', '$amount')";
 	mysql_query($sql) or die('db_update_bid failed: ' . mysql_error());
+}
+
+// Clear previous bid
+function db_clear_previous_bid() {
+	global $sql_table_bid;
+	
+	$sql = "DELETE FROM $sql_table_bid ORDER BY timestamp DESC LIMIT 1";
+	mysql_query($sql) or die('db_clear_previous_bid failed: ' . mysql_error());
+}
+
+// Clear current team from database
+function db_clear_current_team() {
+	global $sql_table_team;
+	
+	$sql = "DELETE FROM $sql_table_team ORDER BY timestamp DESC LIMIT 1";
+	mysql_query($sql) or die('db_clear_current_team failed: ' . mysql_error());
+}
+
+// Clear all teams from database
+function db_clear_all_teams() {
+	global $sql_table_team;
+	
+	$sql = "TRUNCATE TABLE $sql_table_team";
+	mysql_query($sql) or die('db_clear_all_teams failed: ' . mysql_error());
+}
+
+// Clear all bids from database
+function db_clear_all_bids() {
+	global $sql_table_bid;
+	
+	$sql = "TRUNCATE TABLE $sql_table_bid";
+	mysql_query($sql) or die('db_clear_all_bids failed: ' . mysql_error());
 }
 
 // Update our sync_file

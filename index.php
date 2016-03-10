@@ -53,6 +53,27 @@ require('php/header.php');
 	    </div>
 	    <input type="submit" value="Place your bid" id="bidbutton"/>
 	</form>
+	<div>
+	   	<span style="font-weight:bold">Time left to bid: <br></span>	    
+	</div>
+	<div id="clockdiv">
+		<div>
+			<span class="days"></span>
+			<div class="smalltext">Days</div>
+		</div>
+		<div>
+			<span class="hours"></span>
+			<div class="smalltext">Hours</div>
+		</div>
+		<div>
+			<span class="minutes"></span>
+			<div class="smalltext">Minutes</div>
+		</div>
+		<div>
+			<span class="seconds"></span>
+			<div class="smalltext">Seconds</div>
+		</div>
+	</div>
 </div>
 <div class="section_header" style="margin-top:2%">
 	Previous result:
@@ -75,14 +96,16 @@ require('php/header.php');
 
 <script src="js/scripts.js"></script>
 
-
 <div id="footer">
 <?php
 if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) {
+	echo "<button style='margin:1%;font-size:18pt;font-weight:bold;' onclick='clearLastBid();'>Clear Last Bid</button><BR>";
+	echo "<button style='margin:1%;font-size:18pt;font-weight:bold;' onclick='previousTeam();'>Previous Team</button>";
 	echo "<button style='margin:1%;font-size:18pt;font-weight:bold;' onclick='nextTeam();'>Next Team</button><BR>";
+	echo "<button style='margin:1%;font-size:18pt;font-weight:bold;' onclick='restartDraft();'>Restart Draft</button><BR>";
 }
 ?>
-	Created by <a href="https://github.com/cspensky/march_madness_auction">Chad</a><BR>
+	Created by: <a href="https://github.com/cspensky/march_madness_auction">Chad and Alan</a>, v2.0 (2016).<BR>
 </div>
 </body>
 </html>
