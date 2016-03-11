@@ -85,7 +85,7 @@ function db_get_current_bid($team_id) {
 	// extract our results
 	$row = mysql_fetch_array($result);
 	return Array('name'=>$row['name'],
-				'amount'=>intval($row['amount']),
+				'amount'=>$row['amount'],
 				'timestamp'=>$row['timestamp']);
 }
 
@@ -150,9 +150,6 @@ function db_get_bid_teams() {
 // Insert a bid into the table
 function db_update_bid($team_id, $name, $amount) {
 	global $sql_table_bid;
-
-	// Remove any crap from amount (e.g. $)
-	$amount = intval($amount);
 
 	$sql = "INSERT INTO $sql_table_bid (team_id, name, amount)
 	VALUES ('$team_id', '$name', '$amount')";

@@ -39,4 +39,5 @@ db_close();
 
 echo $teamInfo['team'][$next_team_id];
 
+
 ?>

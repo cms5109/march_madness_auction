@@ -25,8 +25,13 @@ $prev_bid_info = db_get_current_bid($prev_team_id);
 $prev_bidder = $prev_bid_info['name'];
 $prev_amount = $prev_bid_info['amount'];
 
-// Update bid table with previous info to reset timer
+// Refresh both tables with previous info to update timestamp
+// Bids
+db_clear_previous_bid();
 db_update_bid($prev_team_id, $prev_bidder, $prev_amount);
+// Teams
+db_clear_current_team();
+db_update_current_team($prev_team_id);
 
 // Update our sync file to notify an update has occured
 update_sync();

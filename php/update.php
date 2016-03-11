@@ -4,7 +4,7 @@ include('static_arrays.php');
 
 // Has anything new happened?
 $sync_value = get_sync_value();
-if (array_key_exists('sync_value',$_GET) && $_GET['sync_value'] == $sync_value) {
+if (array_key_exists('sync_value',$_GET) && ($_GET['sync_value'] == $sync_value)) {
 	echo "";
 	exit;
 }
@@ -15,7 +15,23 @@ db_connect();
 // Get our team id
 $team_id = db_get_current_team_id();
 if ($team_id == -1) {
-	echo "";
+	echo '{	
+		"sync_value":"'.$sync_value.'",
+		"teamimage":"teamImages/filler.jpg",
+		"teamname":"The Most March Madness(est)",
+		"teamregion":"",
+		"teamseed":"",
+		"teamopponent":"You... Are You Ready?",
+		"teamopponentseed":"",
+		"teamcolor":"#000033",
+		"bidamount":"$999",
+		"bidtime":"'.$bid['timestamp'].'",
+		"highestbidder":"The House",
+		"previousteamimage":"teamImages/prevYearWinner.jpg",
+		"previousteam":"Duke University",
+		"previousteamcolor":"",
+		"previousbidamount":"$75",
+		"previoushighestbidder":"Bill Powell"}';
 	exit;
 }
 // Get the id of their opponent
@@ -34,7 +50,7 @@ echo '{
 		"teamopponentseed":"#'.$teamInfo['seed'][$opponent_id].'",
 		"teamcolor":"'.$teamInfo['color'][$team_id].'",
 		"bidamount":"$'.$bid['amount'].'",
-		"bidtime":"$'.$bid['timestamp'].'",
+		"bidtime":"'.$bid['timestamp'].'",
 		"highestbidder":"'.$bid['name'].'",';
 
 // Was there a previous team that was bid on?

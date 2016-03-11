@@ -33,8 +33,13 @@ $prev_bid_info = db_get_current_bid($team_id);
 $prev_bidder = $prev_bid_info['name'];
 $prev_amount = $prev_bid_info['amount'];
 
-// Update table with previous info to refresh timer
+// Refresh last entry in both tables with previous info to update timestamp
+// Bids
+db_clear_previous_bid();
 db_update_bid($team_id, $prev_bidder, $prev_amount);
+// Teams
+db_clear_current_team();
+db_update_current_team($team_id);
 
 // Update our sync file to notify an update has occured
 update_sync();
@@ -42,7 +47,7 @@ update_sync();
 db_close();
 
 echo sprintf("Cleared %s's bid of $%s for %s",
-			 $prev_bidder,
-			 $prev_amount,
+			 $bidder,
+			 $amount,
 			 $teamInfo['team'][$team_id]);
 ?>
