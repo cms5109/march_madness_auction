@@ -14,7 +14,7 @@ require('php/header.php');
 <div class="section_header">
 	Up for auction:
 </div>
-<div class="content" id="main_team" style="background-color:#fff">
+<div class="content" id="main_team" style="background-color:#000033">
 	<div id="teamimage_div">
 		<img src="teamImages/filler.jpg" id="teamimage"/>
 	</div>
@@ -47,14 +47,13 @@ require('php/header.php');
 		    <span style="font-weight:bold"><?php echo $_SESSION['user_name']; ?></span>
 		</div>
 		<div>
-		    <span style="font-size:18pt;">$ 
-		    </span>
+		    <span style="font-size:18pt;">$</span>
 	    	<input type="text" name="amount" value ="" size="3" maxlength="3" /> <br/>
 	    </div>
 	    <input type="submit" value="Place your bid" id="bidbutton"/>
 	</form>
 	<div>
-	   	<span style="font-weight:bold">Time left to bid: <br></span>	    
+	   	<span style="font-weight:bold">TIME LEFT: <br></span>	    
 	</div>
 	<div id="clockdiv">
 		<div>
@@ -81,15 +80,15 @@ require('php/header.php');
 
 <div class="content" id="previous_team">
 	<div style="width:30%;float:left;">
-		<img id="previousteamimage" src="http://www.cbsaltitudegroup.com/wp-content/uploads/2014/03/march_madness.jpg" alt="noimage"/>
+		<img id="previousteamimage" src="teamImages/prevYearWinner" alt="noimage"/>
 	</div>
 	<div style="width:70%;float:left;margin-top:3%">
-		<span id="previousteam"></span>
+		<span id="previousteam">Duke University</span>
 		<br/>
 		Winning Bid: 
-		<span id="previoushighestbidder"></span> 
+		<span id="previoushighestbidder">Bill Powell</span> 
 		for 
-		<span id="previousbidamount"></span>
+		<span id="previousbidamount">75</span>
 	</div>
 	<div style="clear:both;padding:0;margin:0;"></div>
 </div>
@@ -99,9 +98,9 @@ require('php/header.php');
 <div id="footer">
 <?php
 if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) {
-	echo "<button style='margin:1%;font-size:18pt;font-weight:bold;' onclick='clearLastBid();'>Clear Last Bid</button><BR>";
+	echo "<button style='margin:1%;font-size:18pt;font-weight:bold;' onclick='clearLastBid();'>Clear Last Bid</button>";
 	echo "<button style='margin:1%;font-size:18pt;font-weight:bold;' onclick='previousTeam();'>Previous Team</button>";
-	echo "<button style='margin:1%;font-size:18pt;font-weight:bold;' onclick='nextTeam();'>Next Team</button><BR>";
+	echo "<button style='margin:1%;font-size:18pt;font-weight:bold;' onclick='nextTeam();'>Next Team</button>";
 	echo "<button style='margin:1%;font-size:18pt;font-weight:bold;' onclick='restartDraft();'>Restart Draft</button><BR>";
 }
 ?>

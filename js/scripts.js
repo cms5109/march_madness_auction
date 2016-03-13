@@ -36,19 +36,25 @@ function previousTeam() {
     $.get('php/previous_team.php', {}, function(data){
             alert(data);
         }, 'html');
+    $.get('php/update.php', {}, function(data){
+            updatePage(data);
+        }, 'html');
 }
 
 // Make an AJAX call to return to restart draft
 function restartDraft() {
     $.get('php/restart_draft.php', {}, function(data){
-            alert(data);
+            alert(data); ajax_update({});
+        }, 'html');
+    $.get('php/update.php', {}, function(data){
+            updatePage(data);
         }, 'html');
 }
 
 // Make an AJAX call to return to clear last bid
 function clearLastBid() {
     $.get('php/clear_last_bid.php', {}, function(data){
-            alert(data);
+            alert(data); ajax_update({});
         }, 'html');
 }
 
@@ -70,21 +76,34 @@ function updatePage(data) {
     lastData = data;
 
     json = JSON.parse(data);  	
-	var t = json['bidtime'].split(/[- :$]/);
+	var t = json['bidtime'].split(/[- :]/);
 	
-	// Update page graphics (teams)
-    if (current_team != json['teamname']) {
+	// Update page graphics (teams)	
+	if (json['bidamount'] == "$999") {	
+		// Restart
+		// Reset timer for restart
+		deadline = new Date(Date.parse(new Date()) + 5 * 60 * 1000);
+		initializeTimer('clockdiv', deadline);
+	} else if (current_team != json['teamname']) { 
+		// New Team
+		// Reset timer for new team
+		deadline = new Date(Date.parse(new Date(t[0], t[1]-1, t[2], t[3], t[4], t[5])) + 60 * 1000);
+		initializeTimer('clockdiv', deadline);
+		
+		// Refresh page components
         $("#main_team").fadeOut(0).fadeIn(1000);
         $("#content_bid").fadeOut(0).fadeIn(1000);
         $("#previous_team").fadeOut(0);
         document.getElementById('sound_buzzer').play();
-		deadline = new Date(Date.parse(new Date(t[1], t[2]-1, t[3], t[4], t[5], t[6])) + 60 * 1000);
+    } else { 
+		// New Bid
+		// Reset timer for new bid
+		deadline = new Date(Date.parse(new Date(t[0], t[1]-1, t[2], t[3], t[4], t[5])) + 15 * 1000);
 		initializeTimer('clockdiv', deadline);
-    } else {
+		
+		// Refresh bid component
         $("#content_bid").fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
         document.getElementById('sound_cash').play();
-		deadline = new Date(Date.parse(new Date(t[1], t[2]-1, t[3], t[4], t[5], t[6])) + 15 * 1000);
-		initializeTimer('clockdiv', deadline);
     }
     current_team = json['teamname'];
 	
@@ -135,6 +154,11 @@ function initializeTimer(id, endtime) {
 	secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 		
 	if (t.total <= 0) {
+		daysSpan.innerHTML = ('0' + 0).slice(-2);
+		hoursSpan.innerHTML = ('0' + 0).slice(-2);
+		minutesSpan.innerHTML = ('0' + 0).slice(-2);
+		secondsSpan.innerHTML = ('0' + 0).slice(-2);
+	
 		var timeout = true;
 		return timeout;
 	}	
