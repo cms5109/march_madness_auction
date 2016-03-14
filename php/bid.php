@@ -25,7 +25,9 @@ $team_id = db_get_current_team_id();
 $current_bid = db_get_current_bid($team_id);
 
 // Make sure this is a valid bid
-if ($current_bid['name'] == $name) {
+if ($team_id == -1) {
+   echo '{"status": 0, "msg":"Hold your horses, we haven\'t even started yet!"}';
+} else if ($current_bid['name'] == $name) {
 	// Does this person already hold the highest bid?
 	echo '{"status": 0, "msg":"You ('.$name.') already have the highest bid at $'.$current_bid['amount'].'.  Save your money."}';
 
@@ -34,7 +36,7 @@ if ($current_bid['name'] == $name) {
 	// Did they bid enough to beat the maximum bid?
 	echo '{"status": 0, "msg":"Sorry, '.$current_bid['name'].' currently has the high bid at $'.$current_bid['amount'].'."}';
 
-} else {
+}  else {
 	db_update_bid($team_id, $name, $amount);
 	echo '{"status": 1, "msg":"Your bid has been placed for $'.$amount.'."}';
 

@@ -1,3 +1,8 @@
+var lastData = "";
+var sync_value = -1;
+var current_team = "";
+var deadline = new Date(Date.parse("Mon, 14 Mar 2016 20:00:00 EDT"));
+
 //callback handler for form submit
 $("#bidform").submit(function(e)
 {
@@ -27,14 +32,14 @@ $("#bidform").submit(function(e)
 // Make an AJAX call to advance to next auction team
 function nextTeam() {
     $.get('php/next_team.php', {}, function(data){
-            showPopup(data);
+            //showPopup(data);
         }, 'html');
 }
 
 // Make an AJAX call to return to previous auction team
 function previousTeam() {
     $.get('php/previous_team.php', {}, function(data){
-            showPopup(data);
+            //showPopup(data);
         }, 'html');
     $.get('php/update.php', {}, function(data){
             updatePage(data);
@@ -43,6 +48,10 @@ function previousTeam() {
 
 // Make an AJAX call to return to restart draft
 function restartDraft() {
+   if (!confirm("Are you sure you want to do this?  This will erase "
+               + "everyone's bids, and they cannot be recovered!'")) {
+      return;
+    }
     $.get('php/restart_draft.php', {}, function(data){
             showPopup(data); ajax_update({});
         }, 'html');
@@ -61,19 +70,17 @@ function clearLastBid() {
         }, 'html');
 }
 
-var lastData = "";
-var sync_value = -1;
-var current_team = "";
-var deadline = new Date(2016, 2, 14, 20, 30);
 // Update the page with the current state of the auction
 function updatePage(data) {
    
 	// Don't do unecessary work
     if (data == lastData || data == "") {
+
+      // Did our timer timeout?  
 		if (initializeTimer('clockdiv', deadline)) {
 			nextTeam();
 		}
-        return;
+      return;
     } 
 
     lastData = data;
@@ -93,7 +100,7 @@ function updatePage(data) {
 	} else if (current_team != json['teamname']) { 
 		// New Team
 		// Reset timer for new team
-		deadline = new Date(Date.parse(new Date(t[0], t[1]-1, t[2], t[3], t[4], t[5])) + 60 * 1000);
+		deadline = new Date(new Date().getTime() + 60 * 1000);
 		initializeTimer('clockdiv', deadline);
 		
 		// Refresh page components
@@ -104,7 +111,7 @@ function updatePage(data) {
     } else { 
 		// New Bid
 		// Reset timer for new bid
-		deadline = new Date(Date.parse(new Date(t[0], t[1]-1, t[2], t[3], t[4], t[5])) + 24 * 1000);
+		deadline = new Date(new Date().getTime() + 24 * 1000);
 		initializeTimer('clockdiv', deadline);
 		
 		// Refresh bid component
@@ -152,7 +159,7 @@ function initializeTimer(id, endtime) {
 	var minutesSpan = clock.querySelector('.minutes');
 	var secondsSpan = clock.querySelector('.seconds');
 
-    var t = getTimeRemaining(endtime);
+   var t = getTimeRemaining(endtime);
 		
 	daysSpan.innerHTML = ('0' + t.days).slice(-2);
 	hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
@@ -164,15 +171,18 @@ function initializeTimer(id, endtime) {
 		hoursSpan.innerHTML = ('0' + 0).slice(-2);
 		minutesSpan.innerHTML = ('0' + 0).slice(-2);
 		secondsSpan.innerHTML = ('0' + 0).slice(-2);
-	
-		var timeout = true;
-		return timeout;
-	}	
+
+		return true;
+	}
+	return false;
 }
 
 // Calculate time left
 function getTimeRemaining(endtime) {
-	var t = Date.parse(endtime) - Date.parse(new Date(getServerTime()));
+
+   // Get the difference of our two times
+	var t = endtime.getTime() - new Date().getTime();
+
 	var seconds = Math.floor((t / 1000) % 60);
 	var minutes = Math.floor((t / 1000 / 60) % 60);
 	var hours = Math.floor((t / 1000 / 60 / 60) % 24);
@@ -212,11 +222,12 @@ function getServerTime() {
 	return xmlHttp.getResponseHeader("Date");
 }
 
+// Hide our CSS popup window
 function hidePopup() {
    $("#popup").fadeOut(500);
 }
 
-
+// Display a CSS popup window
 function showPopup(message) {
    $("#popup_text").text(message);
    $("#popup").fadeIn(500);
@@ -229,6 +240,4 @@ $( document ).ready(function() {
     $("#previous_team").fadeOut(100); 
     ajax_update({});
     setInterval(function () { ajax_update({sync_value: sync_value}); }, 1000);
-
-    showPopup('test');
 });
