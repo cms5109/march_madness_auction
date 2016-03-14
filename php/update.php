@@ -14,17 +14,21 @@ db_connect();
 
 // Get our team id
 $team_id = db_get_current_team_id();
+// Get the id of their opponent
+$opponent_id = $teamInfo['opp_key'][$team_id];
+// Get the current bid info
+$bid = db_get_current_bid($team_id);
 if ($team_id == -1) {
 	echo '{	
 		"sync_value":"'.$sync_value.'",
 		"teamimage":"teamImages/filler.jpg",
-		"teamname":"The Most March Madness(est)",
-		"teamregion":"",
+		"teamname":"",
+		"teamregion":"The Most March Madness(est)",
 		"teamseed":"",
 		"teamopponent":"You... Are You Ready?",
 		"teamopponentseed":"",
 		"teamcolor":"#000033",
-		"bidamount":"$999",
+		"bidamount":"$'.$bid['amount'].'",
 		"bidtime":"'.$bid['timestamp'].'",
 		"highestbidder":"The House",
 		"previousteamimage":"teamImages/prevYearWinner.jpg",
@@ -34,11 +38,6 @@ if ($team_id == -1) {
 		"previoushighestbidder":"Bill Powell"}';
 	exit;
 }
-// Get the id of their opponent
-$opponent_id = $teamInfo['opp_key'][$team_id];
-// Get the current bid info
-$bid = db_get_current_bid($team_id);
-
 // Return a JSON object
 echo '{	
 		"sync_value":"'.$sync_value.'",

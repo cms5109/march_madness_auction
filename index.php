@@ -80,7 +80,7 @@ require('php/header.php');
 
 <div class="content" id="previous_team">
 	<div style="width:30%;float:left;">
-		<img id="previousteamimage" src="teamImages/prevYearWinner" alt="noimage"/>
+		<img id="previousteamimage" src="teamImages/prevYearWinner.jpg" alt="noimage"/>
 	</div>
 	<div style="width:70%;float:left;margin-top:3%">
 		<span id="previousteam">Duke University</span>

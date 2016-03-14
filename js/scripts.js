@@ -56,6 +56,9 @@ function clearLastBid() {
     $.get('php/clear_last_bid.php', {}, function(data){
             alert(data); ajax_update({});
         }, 'html');
+    $.get('php/update.php', {}, function(data){
+            updatePage(data);
+        }, 'html');
 }
 
 var lastData = "";
@@ -84,6 +87,9 @@ function updatePage(data) {
 		// Reset timer for restart
 		deadline = new Date(Date.parse(new Date()) + 5 * 60 * 1000);
 		initializeTimer('clockdiv', deadline);
+	} else if (json['teamname'] == "") {
+		// Pre-draft
+		initializeTimer('clockdiv', deadline);
 	} else if (current_team != json['teamname']) { 
 		// New Team
 		// Reset timer for new team
@@ -98,7 +104,7 @@ function updatePage(data) {
     } else { 
 		// New Bid
 		// Reset timer for new bid
-		deadline = new Date(Date.parse(new Date(t[0], t[1]-1, t[2], t[3], t[4], t[5])) + 15 * 1000);
+		deadline = new Date(Date.parse(new Date(t[0], t[1]-1, t[2], t[3], t[4], t[5])) + 24 * 1000);
 		initializeTimer('clockdiv', deadline);
 		
 		// Refresh bid component
