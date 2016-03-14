@@ -11,12 +11,12 @@ $("#bidform").submit(function(e)
         success:function(data, textStatus, jqXHR) 
         {
             json = JSON.parse(data);
-            alert(json["msg"]);
+            showPopup(json["msg"]);
             //data: return data from server
         },
         error: function(jqXHR, textStatus, errorThrown) 
         {
-            alert("ERROR: Your bid could not be placed.  Please try again.");
+            showPopup("ERROR: Your bid could not be placed.  Please try again.");
             //if fails      
         }
     });
@@ -27,14 +27,14 @@ $("#bidform").submit(function(e)
 // Make an AJAX call to advance to next auction team
 function nextTeam() {
     $.get('php/next_team.php', {}, function(data){
-            alert(data);
+            showPopup(data);
         }, 'html');
 }
 
 // Make an AJAX call to return to previous auction team
 function previousTeam() {
     $.get('php/previous_team.php', {}, function(data){
-            alert(data);
+            showPopup(data);
         }, 'html');
     $.get('php/update.php', {}, function(data){
             updatePage(data);
@@ -44,7 +44,7 @@ function previousTeam() {
 // Make an AJAX call to return to restart draft
 function restartDraft() {
     $.get('php/restart_draft.php', {}, function(data){
-            alert(data); ajax_update({});
+            showPopup(data); ajax_update({});
         }, 'html');
     $.get('php/update.php', {}, function(data){
             updatePage(data);
@@ -54,7 +54,7 @@ function restartDraft() {
 // Make an AJAX call to return to clear last bid
 function clearLastBid() {
     $.get('php/clear_last_bid.php', {}, function(data){
-            alert(data); ajax_update({});
+            showPopup(data); ajax_update({});
         }, 'html');
     $.get('php/update.php', {}, function(data){
             updatePage(data);
@@ -212,9 +212,23 @@ function getServerTime() {
 	return xmlHttp.getResponseHeader("Date");
 }
 
+function hidePopup() {
+   $("#popup").fadeOut(500);
+}
+
+
+function showPopup(message) {
+   $("#popup_text").text(message);
+   $("#popup").fadeIn(500);
+
+   setTimeout(function() { hidePopup() }, 5000);
+}
+
 // On load, do an initial update then set a timer to update every X seconds
 $( document ).ready(function() {
     $("#previous_team").fadeOut(100); 
     ajax_update({});
     setInterval(function () { ajax_update({sync_value: sync_value}); }, 1000);
+
+    showPopup('test');
 });

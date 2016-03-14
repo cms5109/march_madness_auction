@@ -7,7 +7,7 @@ session_start();
 
 // Mysql stuff
 $servername = "localhost";
-$sql_user = "root";
+$sql_user = "march";
 $sql_pass = "madness";
 $sql_db = "marchmadness";
 $sql_table_bid = "bids";
