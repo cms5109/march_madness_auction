@@ -1,21 +1,352 @@
-player_id,player_name,nickname,email_addr,in_2015,in_2016
-1,Alan Campbell,Alan,acampbell.psu@gmail.com,1,1
-2,Charlie Cimet,Charlie,awol.sentinel@gmail.com,1,1
-3,Matt Menyo,Menyo,mmenyo@gmail.com,1,1
-4,Conal Scanlon,Conal,cms5109@gmail.com,1,1
-5,Chad Spensky,Chad,cspensky@gmail.com,1,1
-6,Mike Ducker,Ducker,mducker28@gmail.com,1,1
-7,Scott Delone,Scott,scott.delone@gmail.com,1,1
-8,Colin Heye,Colin,colin.r.heye@gmail.com,1,0
-9,Andrew Weinert,Fish,phsterp@gmail.com,1,1
-10,Bill Powell,Bill,whpzn6@gmail.com,1,1
-11,Jim Diesel,Diesel,jreed1044@gmail.com,1,1
-12,Tom Conkling,Tommy,tsc154@gmail.com,1,1
-13,Rob Sweeney,Rob,rsweeney.3@gmail.com,1,1
-14,Kevin Dubina,Dubina,kevindubina@gmail.com,1,1
-15,Sean Marlow,Marlow,sean.quinn.marlow@gmail.com,1,0
-16,Jerome Sicard,Jerome,jeromesicard@yahoo.fr,1,1
-17,Kirk Miles,Kirk,kirkpmiles@gmail.com,1,1
-18,Ajay Bajaria,Ajay,abajaria@gmail.com,1,1
-19,Stu Mason,Stu,strtmason@gmail.com,0,1
-20,Dave Bielen,Bielen,dabielen@gmail.com,0,1
+team_id,team_name,team_logo,team_color,in_2015,in_2016
+1,Abilene Christian University,,,0,0
+2,Alabama Agricultural and Mechanical University,,,0,0
+3,Alabama State University,,,0,0
+4,Alcorn State University,,,0,0
+5,American University,,,0,0
+6,Appalachian State University,,,0,0
+7,Arizona State University,,,0,0
+8,Arkansas State University,,,0,0
+9,Auburn University,,,0,0
+10,Austin Peay State University,AustinPeay.png,#A50004,0,1
+11,Ball State University,,,0,0
+12,Baylor University,Baylor.png,#2B4C3F,1,1
+13,Belmont University,Belmont.png,#002868,1,0
+14,"Bethune, Cookman University",,,0,0
+15,Binghamton University,,,0,0
+16,Boise State University,BoiseSt.png,#0038A8,1,0
+17,Boston College,,,0,0
+18,Boston University,,,0,0
+19,Bowling Green State University,,,0,0
+20,Bradley University,,,0,0
+21,Brigham Young University,BYU.png,#002255,1,0
+22,Brown University,,,0,0
+23,Bryant University,,,0,0
+24,Bucknell University,,,0,0
+25,Butler University,Butler.png,#000000,1,1
+26,California Polytechnic State University,,,0,0
+27,"California State University, Bakersfield",CSUB.png,#005DAA,0,1
+28,"California State University, Fresno",CSUFresno.png,#A0274B,0,1
+29,"California State University, Fullerton",,,0,0
+30,"California State University, Long Beach",CSULB.png,#FFC61E,0,0
+31,"California State University, Northridge",,,0,0
+32,"California State University, Sacramento",,,0,0
+33,Campbell University,,,0,0
+34,Canisius College,,,0,0
+35,Central Connecticut State University,,,0,0
+36,Central Michigan University,,,0,0
+37,Charleston Southern University,,,0,0
+38,Chicago State University,,,0,0
+39,Clemson University,,,0,0
+40,Cleveland State University,,,0,0
+41,Coastal Carolina University,CCU.png,#007073,1,0
+42,Colgate University,,,0,0
+43,College of Charleston,,,0,0
+44,College of the Holy Cross,HolyCross.png,#602D89,0,1
+45,College of William and Mary& Mary),,,0,0
+46,Colorado State University,,,0,0
+47,Columbia University,,,0,0
+48,Coppin State University,,,0,0
+49,Cornell University,,,0,0
+50,Creighton University,,,0,0
+51,Dartmouth College,,,0,0
+52,Davidson College,David.png,#AC1A2F,1,0
+53,Delaware State University,,,0,0
+54,DePaul University,,,0,0
+55,Drake University,,,0,0
+56,Drexel University,,,0,0
+57,Duke University,Duke.png,#001A57,1,1
+58,Duquesne University,,,0,0
+59,East Carolina University,,,0,0
+60,East Tennessee State University,,,0,0
+61,Eastern Illinois University,,,0,0
+62,Eastern Kentucky University,,,0,0
+63,Eastern Michigan University,,,0,0
+64,Eastern Washington University,EWU.png,#A10022,1,0
+65,Elon University,,,0,0
+66,Fairfield University,,,0,0
+67,Fairleigh Dickinson University,FDU.png,#003F87,0,1
+68,Florida Agricultural and Mechanical University,,,0,0
+69,Florida Atlantic University,,,0,0
+70,Florida Gulf Coast University,FGCU.png,#00287A,0,1
+71,Florida International University,,,0,0
+72,Florida State University,,,0,0
+73,Fordham University,,,0,0
+74,Furman University,,,0,0
+75,"Gardner, Webb University",,,0,0
+76,George Mason University,,,0,0
+77,George Washington University,,,0,0
+78,Georgetown University,Gtown.png,#011E41,1,0
+79,Georgia Institute of Technology,,,0,0
+80,Georgia Southern University,,,0,0
+81,Georgia State University,GSU.png,#0039A6,1,0
+82,Gonzaga University,Zaga.png,#003366,1,1
+83,Grambling State University,,,0,0
+84,Grand Canyon University,,,0,0
+85,Hampton University,Hampton.png,#001489,1,1
+86,Harvard University,Harvard.png,#A51C30,1,0
+87,High Point University,,,0,0
+88,Hofstra University,,,0,0
+89,Houston Baptist University,,,0,0
+90,Howard University,,,0,0
+91,Idaho State University,,,0,0
+92,Illinois State University,,,0,0
+93,Indiana State University,,,0,0
+94,"Indiana University ,  Purdue University Fort Wayne",,,0,0
+95,"Indiana University ,  Purdue University Indianapolis",,,0,0
+96,Indiana University Bloomington,IU.png,#7D110C,1,1
+97,Iona College,Iona.png,#910026,0,1
+98,Iowa State University,ISU.png,#CC0000,1,1
+99,Jackson State University,JackSt.png,#002147,0,0
+100,Jacksonville State University,,,0,0
+101,Jacksonville University,,,0,0
+102,James Madison University,,,0,0
+103,Kansas State University,,,0,0
+104,Kennesaw State University,,,0,0
+105,Kent State University,,,0,0
+106,La Salle University,,,0,0
+107,Lafayette College,LAF.png,#822433,1,0
+108,Lamar University,,,0,0
+109,Lehigh University,,,0,0
+110,Liberty University,,,0,0
+111,Lipscomb University,,,0,0
+112,Long Island University (Brooklyn Campus),,,0,0
+113,Longwood University,,,0,0
+114,Louisiana State University,LSU.png,#461D7C,1,0
+115,Louisiana Tech University,,,0,0
+116,Loyola Marymount University,,,0,0
+117,Loyola University Chicago,,,0,0
+118,Loyola University Maryland,,,0,0
+119,Manhattan College,Manhtn.png,#147036,1,0
+120,Marist College,,,0,0
+121,Marquette University,,,0,0
+122,Marshall University,,,0,0
+123,McNeese State University,,,0,0
+124,Mercer University,,,0,0
+125,Miami University (Ohio),,,0,0
+126,Michigan State University,MichSt.png,#18453B,1,1
+127,Middle Tennessee State University,MTSU.png,#0066CC,0,1
+128,Mississippi State University,,,0,0
+129,Mississippi Valley State University,,,0,0
+130,Missouri State University,,,0,0
+131,Monmouth University,Monmouth.png,#BE1139,0,0
+132,Montana State University,,,0,0
+133,Morehead State University,,,0,0
+134,Morgan State University,,,0,0
+135,Mount St. Mary's University,,,0,0
+136,Murray State University,,,0,0
+137,New Jersey Institute of Technology,,,0,0
+138,New Mexico State University,NMSU.png,#8E2344,1,0
+139,Niagara University,,,0,0
+140,Nicholls State University,,,0,0
+141,Norfolk State University,,,0,0
+142,North Carolina Agricultural and Technical State University,,,0,0
+143,North Carolina Central University,,,0,0
+144,North Carolina State University,NCSt.png,#CC0000,1,0
+145,North Dakota State University,NDSt.png,#006633,1,0
+146,Northeastern University,NErn.png,#CC0000,1,0
+147,Northern Arizona University,,,0,0
+148,Northern Illinois University,,,0,0
+149,Northern Kentucky University,,,0,0
+150,Northwestern State University,,,0,0
+151,Northwestern University,,,0,0
+152,Oakland University,,,0,0
+153,Ohio State University,OhSt.png,#BB0000,1,0
+154,Ohio University,,,0,0
+155,"Oklahoma State University, Stillwater",OkSt.png,#FF6600,1,0
+156,Old Dominion University,,,0,0
+157,Oral Roberts University,,,0,0
+158,Oregon State University,OregonSt.png,#C34500,0,1
+159,Pennsylvania State University,PSU.png,#002654,0,0
+160,Pepperdine University,,,0,0
+161,Portland State University,,,0,0
+162,Prairie View A&M University,,,0,0
+163,Presbyterian College,,,0,0
+164,Princeton University,,,0,0
+165,Providence College,Prov.png,#000000,1,1
+166,Purdue University,Purdue.png,#A3792C,1,1
+167,Quinnipiac University,,,0,0
+168,Radford University,,,0,0
+169,Rice University,,,0,0
+170,Rider University,,,0,0
+171,Robert Morris University,BobMo.png,#14234B,1,0
+172,Rutgers University,,,0,0
+173,Sacred Heart University,,,0,0
+174,Saint Francis University,,,0,0
+175,Saint Joseph's University,StJoes.png,#9E1B32,0,1
+176,Saint Louis University,,,0,0
+177,Saint Mary's College of California,StMarys.png,#CC2D30,0,0
+178,Saint Peter's University,,,0,0
+179,Sam Houston State University,,,0,0
+180,Samford University,,,0,0
+181,San Diego State University,SDSU.png,#000000,1,0
+182,San Jose State University,,,0,0
+183,Santa Clara University,,,0,0
+184,Seattle University,,,0,0
+185,Seton Hall University,SetonHall.png,#000069,0,1
+186,Siena College,,,0,0
+187,South Carolina State University,,,0,0
+188,South Dakota State University,SDakSt.png,#003893,0,1
+189,Southeast Missouri State University,,,0,0
+190,Southeastern Louisiana University,,,0,0
+191,Southern Illinois University Carbondale,,,0,0
+192,Southern Illinois University Edwardsville,,,0,0
+193,Southern Methodist University,SMU.png,#CE1126,1,0
+194,Southern University,Southern.png,#9BDDFF,0,1
+195,Southern Utah University,,,0,0
+196,St. Bonaventure University,StBona.png,#54261A,0,0
+197,St. Francis College,,,0,0
+198,St. John's University,StJohns.png,#DD1A32,1,0
+199,Stanford University,,,0,0
+200,Stephen F. Austin State University,SFA.png,#59118E,1,1
+201,Stetson University,,,0,0
+202,Stony Brook University,StonyB.png,#990000,0,1
+203,Syracuse University,Cuse.png,#D44500,0,1
+204,Temple University,Temple.png,#990033,0,1
+205,Tennessee State University,,,0,0
+206,Tennessee Technological University,,,0,0
+207,Texas A&M University,TAMU.png,#500000,0,1
+208,"Texas A&M University, Corpus Christi",TAMUCC.png,#0067C5,0,0
+209,Texas Christian University,,,0,0
+210,Texas Southern University,TSU.png,#75263D,1,0
+211,Texas State University,,,0,0
+212,Texas Tech University,TexasTech.png,#CC0000,0,1
+213,The Citadel,,,0,0
+214,Towson University,,,0,0
+215,Troy University,,,0,0
+216,Tulane University,,,0,0
+217,United States Air Force Academy,,,0,0
+218,United States Military Academy,,,0,0
+219,United States Naval Academy,,,0,0
+220,"University at Albany, SUNY",Albany.png,#E0AA0F,1,0
+221,"University at Buffalo, SUNY",UBuff.png,#041A9B,1,1
+222,University of Akron,Akron.png,#00285E,0,0
+223,University of Alabama,Bama.png,#990000,0,0
+224,University of Alabama at Birmingham,UAB.png,#1E6B52,1,0
+225,University of Arizona,Zona.png,#003366,1,1
+226,University of Arkansas,UArk.png,#9D2235,1,0
+227,University of Arkansas at Little Rock,UALR.png,#75263D,0,1
+228,University of Arkansas at Pine Bluff,,,0,0
+229,"University of California, Berkeley",Cal.png,#002654,0,1
+230,"University of California, Davis",,,0,0
+231,"University of California, Irvine",UCI.png,#0064A4,1,0
+232,"University of California, Los Angeles",UCLA.png,#3284BF,1,0
+233,"University of California, Riverside",,,0,0
+234,"University of California, Santa Barbara",,,0,0
+235,University of Central Arkansas,,,0,0
+236,University of Central Florida,,,0,0
+237,University of Cincinnati,UCincy.png,#000000,1,1
+238,"University of Colorado, Boulder",CUBoulder.png,#CFB87C,0,1
+239,University of Connecticut,UConn.png,#000E2F,0,1
+240,University of Dayton,Dayton.png,#CE1141,1,1
+241,University of Delaware,,,0,0
+242,University of Denver,,,0,0
+243,University of Detroit Mercy,,,0,0
+244,University of Evansville,,,0,0
+245,University of Florida,,,0,0
+246,University of Georgia,UGa.png,#CC0000,1,0
+247,University of Hartford,,,0,0
+248,University of Hawai?i at M?noa,Hawaii.png,#024930,0,1
+249,University of Houston,,,0,0
+250,University of Idaho,,,0,0
+251,University of Illinois at Chicago,,,0,0
+252,"University of Illinois at Urbana, Champaign",,,0,0
+253,University of Iowa,Iowa.png,#000000,1,1
+254,University of Kansas,Kansas.png,#0022B4,1,1
+255,University of Kentucky,UK.png,#005DAA,1,1
+256,University of Louisiana at Lafayette,,,0,0
+257,University of Louisiana at Monroe,ULM.png,#660000,0,0
+258,University of Louisville,Lville.png,#AD0000,1,0
+259,University of Maine,,,0,0
+260,University of Maryland Eastern Shore,,,0,0
+261,"University of Maryland, Baltimore County",,,0,0
+262,"University of Maryland, College Park",UMd.png,#CE1126,1,1
+263,University of Massachusetts Amherst,,,0,0
+264,University of Massachusetts Lowell,,,0,0
+265,University of Memphis,Memphis.png,#003893,0,0
+266,University of Miami,Miami.png,#F47321,0,1
+267,University of Michigan,Mich.png,#FFCB05,0,1
+268,University of Minnesota,,,0,0
+269,University of Mississippi,OleMiss.png,#CE1126,1,0
+270,University of Missouri,,,0,0
+271,"University of Missouri, Kansas City",,,0,0
+272,University of Montana,Montana.png,#5E001D,0,0
+273,University of Nebraska Omaha,,,0,0
+274,"University of Nebraska, Lincoln",,,0,0
+275,"University of Nevada, Las Vegas",,,0,0
+276,"University of Nevada, Reno",,,0,0
+277,University of New Hampshire,,,0,0
+278,University of New Mexico,,,0,0
+279,University of New Orleans,,,0,0
+280,University of North Carolina at Asheville,UNCAshe.png,#003F87,0,1
+281,University of North Carolina at Chapel Hill,UNC.png,#56A0D3,1,1
+282,University of North Carolina at Charlotte,,,0,0
+283,University of North Carolina at Greensboro,,,0,0
+284,University of North Carolina at Wilmington,UNCW.png,#006D66,0,1
+285,University of North Dakota,,,0,0
+286,University of North Florida,UNFla.png,#00337F,1,0
+287,University of North Texas,,,0,0
+288,University of Northern Colorado,,,0,0
+289,University of Northern Iowa,UNI.png,#4B116F,1,1
+290,University of Notre Dame,ND.png,#002B5B,1,1
+291,University of Oklahoma,Okla.png,#660000,1,1
+292,University of Oregon,Oregon.png,#154733,1,1
+293,University of Pennsylvania,,,0,0
+294,University of Pittsburgh,Pitt.png,#192857,0,1
+295,University of Portland,,,0,0
+296,University of Rhode Island,,,0,0
+297,University of Richmond,,,0,0
+298,University of San Diego,,,0,0
+299,University of San Francisco,,,0,0
+300,University of South Alabama,,,0,0
+301,University of South Carolina,SouthCarolina.png,#8C2633,0,0
+302,University of South Carolina Upstate,,,0,0
+303,University of South Dakota,,,0,0
+304,University of South Florida,,,0,0
+305,University of Southern California,USC.png,#990000,0,1
+306,University of Southern Mississippi,,,0,0
+307,University of Tennessee,,,0,0
+308,University of Tennessee at Chattanooga,UTChatt.png,#E0AA0F,0,1
+309,University of Tennessee at Martin,,,0,0
+310,University of Texas at Arlington,,,0,0
+311,University of Texas at Austin,UTex.png,#BF5700,1,1
+312,University of Texas at El Paso,,,0,0
+313,University of Texas at San Antonio,,,0,0
+314,University of Texas Rio Grande Valley,,,0,0
+315,University of the Incarnate Word,,,0,0
+316,University of the Pacific,,,0,0
+317,University of Toledo,,,0,0
+318,University of Tulsa,Tulsa.png,#00337F,0,1
+319,University of Utah,Utah.png,#CC0000,1,1
+320,University of Vermont,,,0,0
+321,University of Virginia,UVa.png,#003F87,1,1
+322,University of Washington,,,0,0
+323,"University of Wisconsin, Green Bay",UWGB.png,#006633,0,1
+324,"University of Wisconsin, Madison",Wisky.png,#B70101,1,1
+325,"University of Wisconsin, Milwaukee",,,0,0
+326,University of Wyoming,Wyo.png,#593D2B,1,0
+327,Utah State University,,,0,0
+328,Utah Valley University,,,0,0
+329,Valparaiso University,Valpo.png,#613318,1,0
+330,Vanderbilt University,Vandy.png,#997F3D,0,1
+331,Villanova University,Nova.png,#003366,1,1
+332,Virginia Commonwealth University,VCU.png,#F8B800,1,1
+333,Virginia Military Institute,,,0,0
+334,Virginia Polytechnic Institute and State University,,,0,0
+335,Wagner College,,,0,0
+336,Wake Forest University,,,0,0
+337,Washington State University,,,0,0
+338,Weber State University,WeberSt.png,#492365,0,1
+339,West Virginia University,WVU.png,#002855,1,1
+340,Western Carolina University,,,0,0
+341,Western Illinois University,,,0,0
+342,Western Kentucky University,,,0,0
+343,Western Michigan University,,,0,0
+344,Wichita State University,WichSt.png,#000000,1,1
+345,Winthrop University,,,0,0
+346,Wofford College,Woff.png,#E1CAA2,1,0
+347,Wright State University,,,0,0
+348,Xavier University,Xavier.png,#002857,1,1
+349,Yale University,Yale.png,#00356B,0,1
+350,Youngstown State University,,,0,0
+,,,,,68
