@@ -1,7 +1,7 @@
 var lastData = "";
 var sync_value = -1;
 var current_team = "";
-var deadline = new Date(Date.parse("Mon, 14 Mar 2016 20:00:00 EDT"));
+var deadline = new Date(Date.parse("Mon, 14 Mar 2016 20:30:00 EDT"));
 
 //callback handler for form submit
 $("#bidform").submit(function(e)
@@ -76,7 +76,7 @@ function updatePage(data) {
 	// Don't do unecessary work
     if (data == lastData || data == "") {
 
-      // Did our timer timeout?  
+      // Did our timer timeout?
 		if (initializeTimer('clockdiv', deadline)) {
 			nextTeam();
 		}

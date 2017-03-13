@@ -12,6 +12,7 @@ $sql_pass = "madness";
 $sql_db = "marchmadness";
 $sql_table_bid = "bids";
 $sql_table_team = "current_team";
+$admin_pass = "haters";
 
 // Syncronization stuff
 $sync_file = "./sync_file"; // actually in 'php/'
@@ -47,10 +48,14 @@ if (!array_key_exists('user_name',$_SESSION)) {
 		fail("");
 	}
 	// Check to see if this is an admin
-	if ($_SESSION['user_email'] == "acampbell.psu@gmail.com" ||
-	$_SESSION['user_email'] == "cspensky@gmail.com") {
+	if ($_SESSION['user_email'] == "acampbell.psu@gmail.com") {
 		$_SESSION['ADMIN'] = true;
 	}
+}
+
+// Check to see if this is an admin
+if ($_GET['admin'] == $admin_pass) {
+   //$_SESSION['ADMIN'] = true;
 }
 
 // Create connection
