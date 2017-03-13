@@ -27,15 +27,15 @@ if ($team_id == -1) {
 		"teamseed":"",
 		"teamopponent":"You... Are You Ready?",
 		"teamopponentseed":"",
-		"teamcolor":"#000033",
+		"teamcolor":"#003366",
 		"bidamount":"$'.$bid['amount'].'",
 		"bidtime":"'.$bid['timestamp'].'",
 		"highestbidder":"The House",
 		"previousteamimage":"teamImages/prevYearWinner.jpg",
-		"previousteam":"Duke University",
+		"previousteam":"Villanova University",
 		"previousteamcolor":"",
-		"previousbidamount":"$75",
-		"previoushighestbidder":"Bill Powell"}';
+		"previousbidamount":"$90",
+		"previoushighestbidder":"Scott Delone"}';
 	exit;
 }
 // Return a JSON object
