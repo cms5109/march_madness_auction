@@ -83,10 +83,10 @@ require('php/header.php');
 		<img id="previousteamimage" src="teamImages/prevYearWinner.jpg" alt="noimage"/>
 	</div>
 	<div style="width:70%;float:left;margin-top:3%">
-		<span id="previousteam">Duke University</span>
+		<span id="previousteam">Villanova University</span>
 		<br/>
 		Winning Bid: 
-		<span id="previoushighestbidder">Bill Powell</span> 
+		<span id="previoushighestbidder">Scott Delone</span> 
 		for 
 		<span id="previousbidamount">75</span>
 	</div>
@@ -104,7 +104,7 @@ if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) {
 	echo "<button style='margin:1%;font-size:18pt;font-weight:bold;' onclick='restartDraft();'>Restart Draft</button><BR>";
 }
 ?>
-	Created by: <a href="https://github.com/cspensky/march_madness_auction">Chad and Alan</a>, v2.0 (2016).<BR>
+	Created by: <a href="https://github.com/cspensky/march_madness_auction">Chad and Alan</a>, v3.0 (2017).<BR>
 </div>
 
 <div id="popup">
