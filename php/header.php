@@ -7,7 +7,7 @@ session_start();
 
 // Mysql stuff
 $servername = "localhost";
-$sql_user = "root";
+$sql_user = "march";
 $sql_pass = "madness";
 $sql_db = "marchmadness";
 $sql_table_bid = "bids";
@@ -21,7 +21,7 @@ $BID_INCREMENT = 1;
 
 // What to display if the user fails authentication
 function fail($msg) {
-	echo '<body style="margin-top:40%;text-align:center;">';
+	echo '<body style="margin-top:25%;text-align:center;">';
 	if ($msg != "") {
 		echo '<div style="font-weight:bold;color:red;margin:2%">'.$msg.'</div>';
 	}
@@ -47,7 +47,8 @@ if (!array_key_exists('user_name',$_SESSION)) {
 		fail("");
 	}
 	// Check to see if this is an admin
-	if ($_SESSION['user_email'] == "acampbell.psu@gmail.com") {
+	if ($_SESSION['user_email'] == "acampbell.psu@gmail.com" ||
+	$_SESSION['user_email'] == "cspensky@gmail.com") {
 		$_SESSION['ADMIN'] = true;
 	}
 }

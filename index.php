@@ -106,5 +106,15 @@ if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) {
 ?>
 	Created by: <a href="https://github.com/cspensky/march_madness_auction">Chad and Alan</a>, v2.0 (2016).<BR>
 </div>
+
+<div id="popup">
+<div id="popup_content">
+<a href="#" id="popup_close" title="Close" onclick="hidePopup();">X</a>
+<div id="popup_text">
+Empty
+</div>
+</div>
+</div>
+
 </body>
 </html>

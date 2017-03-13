@@ -17,7 +17,7 @@ $team_id = db_get_current_team_id();
 // Get current bid info
 $bid_info = db_get_current_bid($team_id);
 $bidder = $bid_info['name'];
-$amount = $prev_bid_info['amount'];
+$amount = $bid_info['amount'];
 
 // Don't remove bids by "The House"
 if ($bidder == "The House") {
