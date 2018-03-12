@@ -2,7 +2,6 @@
 
 require('header.php');
 include('static_arrays.php');
-
 if (!isset($_SESSION['ADMIN']) || $_SESSION['ADMIN'] != true) {
 //	echo "You don't have permission to advance the teams.";
 	exit;

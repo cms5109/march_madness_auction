@@ -53,15 +53,15 @@ function build_table($fileName) {
 	// Fill initial bids based on scale
 	foreach($table["seed"] as $key => $value) {
 		if ($value == 1 || $value == 2){
-			$table["initBid"][$key] = "\$20";
+			$table["initBid"][$key] = "20";
 		} elseif ($value == 3 || $value == 4) {
-			$table["initBid"][$key] = "\$10";
+			$table["initBid"][$key] = "10";
 		} elseif ($value >= 5 && $value <= 8) {
-			$table["initBid"][$key] = "\$5";
+			$table["initBid"][$key] = "5";
 		} elseif ($value >= 9 && $value <= 12) {
-			$table["initBid"][$key] = "\$3";
+			$table["initBid"][$key] = "3";
 		} else {
-			$table["initBid"][$key] = "\$1";
+			$table["initBid"][$key] = "1";
 		} // end if-else
 	} // end foreach
 
