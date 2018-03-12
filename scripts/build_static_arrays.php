@@ -10,8 +10,8 @@ $sql_pass = "madness";
 $sql_db = "calcutta_info";
 $sql_table_player = "player_info";
 $sql_table_info = "team_info";
-$sql_table_team = "team_2017";
-$sql_year = "2017";
+$sql_table_team = "team_2018";
+$sql_year = "2018";
 
 $teamInfo = build_table_db();
 $userInfo = build_acl_db();
