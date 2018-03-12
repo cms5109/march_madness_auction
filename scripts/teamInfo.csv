@@ -1,69 +1,69 @@
-﻿159,Pennsylvania State University,42,Home,PSU.png,#002654
-"7, 203",Arizona State/Syracuse,11,Midwest,ASU.png,#8C1D40
-9,Auburn University,4,Midwest,Auburn.png,#0C2340
-24,Bucknell University,14,Midwest,Bucknell.png,#00337F
-25,Butler University,10,East,Butler.png,#000000
-29,"California State University, Fullerton",15,East,CSUFull.png,#00274C
-39,Clemson University,5,Midwest,Clemson.png,#F66733
-43,College of Charleston,13,Midwest,Charleston.png,#660000
-50,Creighton University,8,South,Creighton.png,#3C4982
-52,Davidson College,12,South,David.png,#AC1A2F
-57,Duke University,2,Midwest,Duke.png,#001A57
-72,Florida State University,9,West,FSU.png,#782F40
-81,Georgia State University,15,South,GSU.png,#0039A6
-82,Gonzaga University,4,West,Zaga.png,#003366
-97,Iona College,15,Midwest,Iona.png,#910026
-103,Kansas State University,9,South,KSU.png,#512888
-111,Lipscomb University,15,West,Lipscomb.png,#331E54
-"112,168",Long Island Brooklyn/Radford,16,East,LIUBk.png,#000000
-117,Loyola University Chicago,11,South,LoyolaChi.png,#861F41
-122,Marshall University,13,East,Marshall.png,#00B140
-126,Michigan State University,3,Midwest,MichSt.png,#18453B
-136,Murray State University,12,East,MurraySt.png,#002144
-138,New Mexico State University,12,Midwest,NMSU.png,#8E2344
-"143,210",North Carolina Central/Texas Southern,16,West,NCCU.png,#8C2633
-144,North Carolina State University,9,Midwest,NCSt.png,#CC0000
-153,Ohio State University,5,West,OhSt.png,#BB0000
-165,Providence College,10,West,Prov.png,#000000
-166,Purdue University,2,East,Purdue.png,#A3792C
-181,San Diego State University,11,West,SDSU.png,#000000
-185,Seton Hall University,8,Midwest,SetonHall.png,#000069
-188,South Dakota State University,12,West,SDakSt.png,#003893
-"196,232",St. Bonaventure/UCLA,11,East,StBona.png,#54261A
-200,Stephen F. Austin State University,14,East,SFA.png,#59118E
-207,Texas A&M University,7,West,TAMU.png,#500000
-209,Texas Christian University,6,Midwest,TCU.png,#4D1979
-212,Texas Tech University,3,East,TexasTech.png,#CC0000
-221,"University at Buffalo, SUNY",13,South,UBuff.png,#041A9B
-223,University of Alabama,9,East,Bama.png,#990000
-225,University of Arizona,4,South,Zona.png,#003366
-226,University of Arkansas,7,East,UArk.png,#9D2235
-237,University of Cincinnati,2,South,UCincy.png,#000000
-245,University of Florida,6,East,UF.png,#FA4616
-249,University of Houston,6,West,Houston.png,#C8102E
-254,University of Kansas,1,Midwest,Kansas.png,#0022B4
-255,University of Kentucky,5,South,UK.png,#005DAA
-261,"University of Maryland, Baltimore County",16,South,UMBC.png,#000000
-266,University of Miami,6,South,Miami.png,#F47321
-267,University of Michigan,3,West,Mich.png,#FFCB05
-270,University of Missouri,8,West,Mizzou.png,#000000
-272,University of Montana,14,West,Montana.png,#5E001D
-276,"University of Nevada, Reno",7,South,UNR.png,#003366
-281,University of North Carolina at Chapel Hill,2,West,UNC.png,#56A0D3
-283,University of North Carolina at Greensboro,13,West,UNCG.png,#FFCC00
-291,University of Oklahoma,10,Midwest,Okla.png,#660000
-293,University of Pennsylvania,16,Midwest,UPenn.png,#000F3A
-296,University of Rhode Island,7,Midwest,URI.png,#002147
-307,University of Tennessee,3,South,Tenn.png,#FF8200
-311,University of Texas at Austin,10,South,UTex.png,#BF5700
-321,University of Virginia,1,South,UVa.png,#003F87
-331,Villanova University,1,East,Nova.png,#003366
-334,Virginia Polytechnic Institute and State University,8,East,VTech.png,#660000
-339,West Virginia University,5,East,WVU.png,#002855
-344,Wichita State University,4,East,WichSt.png,#000000
-347,Wright State University,14,South,WrightSt.png,#026937
-348,Xavier University,1,West,Xavier.png,#002857
-,,,,,
-,,,,,
-,,,,,
-,,,,Xavier.png,#002857
+159	Pennsylvania State University	42	Home	PSU.png	#002654
+"7, 203"	Arizona State/Syracuse	11	Midwest	NCAA.png	#8C1D40
+9	Auburn University	4	Midwest	Auburn.png	#0C2340
+24	Bucknell University	14	Midwest	Bucknell.png	#00337F
+25	Butler University	10	East	Butler.png	#000000
+29	"California State University, Fullerton"	15	East	CSUFull.png	#00274C
+39	Clemson University	5	Midwest	Clemson.png	#F66733
+43	College of Charleston	13	Midwest	Charleston.png	#660000
+50	Creighton University	8	South	Creighton.png	#3C4982
+52	Davidson College	12	South	David.png	#AC1A2F
+57	Duke University	2	Midwest	Duke.png	#001A57
+72	Florida State University	9	West	FSU.png	#782F40
+81	Georgia State University	15	South	GSU.png	#0039A6
+82	Gonzaga University	4	West	Zaga.png	#003366
+97	Iona College	15	Midwest	Iona.png	#910026
+103	Kansas State University	9	South	KSU.png	#512888
+111	Lipscomb University	15	West	Lipscomb.png	#331E54
+"112,168"	Long Island Brooklyn/Radford	16	East	NCAA.png	#000000
+117	Loyola University Chicago	11	South	LoyolaChi.png	#861F41
+122	Marshall University	13	East	Marshall.png	#00B140
+126	Michigan State University	3	Midwest	MichSt.png	#18453B
+136	Murray State University	12	East	MurraySt.png	#002144
+138	New Mexico State University	12	Midwest	NMSU.png	#8E2344
+"143,210"	North Carolina Central/Texas Southern	16	West	NCAA.png	#8C2633
+144	North Carolina State University	9	Midwest	NCSt.png	#CC0000
+153	Ohio State University	5	West	OhSt.png	#BB0000
+165	Providence College	10	West	Prov.png	#000000
+166	Purdue University	2	East	Purdue.png	#A3792C
+181	San Diego State University	11	West	SDSU.png	#000000
+185	Seton Hall University	8	Midwest	SetonHall.png	#000069
+188	South Dakota State University	12	West	SDakSt.png	#003893
+"196,232"	St. Bonaventure/UCLA	11	East	NCAA.png	#54261A
+200	Stephen F. Austin State University	14	East	SFA.png	#59118E
+207	Texas A&M University	7	West	TAMU.png	#500000
+209	Texas Christian University	6	Midwest	TCU.png	#4D1979
+212	Texas Tech University	3	East	TexasTech.png	#CC0000
+221	"University at Buffalo, SUNY"	13	South	UBuff.png	#041A9B
+223	University of Alabama	9	East	Bama.png	#990000
+225	University of Arizona	4	South	Zona.png	#003366
+226	University of Arkansas	7	East	UArk.png	#9D2235
+237	University of Cincinnati	2	South	UCincy.png	#000000
+245	University of Florida	6	East	UF.png	#FA4616
+249	University of Houston	6	West	Houston.png	#C8102E
+254	University of Kansas	1	Midwest	Kansas.png	#0022B4
+255	University of Kentucky	5	South	UK.png	#005DAA
+261	"University of Maryland, Baltimore County"	16	South	UMBC.png	#000000
+266	University of Miami	6	South	Miami.png	#F47321
+267	University of Michigan	3	West	Mich.png	#FFCB05
+270	University of Missouri	8	West	Mizzou.png	#000000
+272	University of Montana	14	West	Montana.png	#5E001D
+276	"University of Nevada, Reno"	7	South	UNR.png	#003366
+281	University of North Carolina at Chapel Hill	2	West	UNC.png	#56A0D3
+283	University of North Carolina at Greensboro	13	West	UNCG.png	#FFCC00
+291	University of Oklahoma	10	Midwest	Okla.png	#660000
+293	University of Pennsylvania	16	Midwest	UPenn.png	#000F3A
+296	University of Rhode Island	7	Midwest	URI.png	#002147
+307	University of Tennessee	3	South	Tenn.png	#FF8200
+311	University of Texas at Austin	10	South	UTex.png	#BF5700
+321	University of Virginia	1	South	UVa.png	#003F87
+331	Villanova University	1	East	Nova.png	#003366
+334	Virginia Polytechnic Institute and State University	8	East	VTech.png	#660000
+339	West Virginia University	5	East	WVU.png	#002855
+344	Wichita State University	4	East	WichSt.png	#000000
+347	Wright State University	14	South	WrightSt.png	#026937
+348	Xavier University	1	West	Xavier.png	#002857
+					
+					
+					
+				Xavier.png	#002857
