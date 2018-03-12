@@ -14,8 +14,9 @@ db_connect();
 $bid_teams = db_get_bid_teams();
 
 // Remove them from the list of all possible teams
-$remaing_teams = array_diff(range(0,count($teamInfo['team'])-1), $bid_teams);
+$remaing_teams = array_diff(range(1,count($teamInfo['team'])), $bid_teams);
 $remaing_teams = array_values($remaing_teams);
+
 
 // Are there any teams left?
 if (count($remaing_teams) == 0) {
