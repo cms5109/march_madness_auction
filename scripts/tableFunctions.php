@@ -24,7 +24,7 @@ function build_table($fileName) {
 	$color  = array();
 	
 	// Parse data from CSV
-	$row = 0;
+	$row = 1;
 	if (($handle = fopen($fileName, "r")) !== FALSE) {
 		while (($data = fgetcsv($handle, 1024, ",", '"', '"')) !== FALSE) {
 			$team[$row]   = $data[1];
@@ -39,7 +39,7 @@ function build_table($fileName) {
 	}
 
 	// Define keys
-	$keys = range(0, count($team) - 1);
+	$keys = range(1, count($team));
 	
 	// Allocate arrays
 	$table = array( "team"    => array_combine($keys, $team),
