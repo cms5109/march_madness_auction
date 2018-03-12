@@ -12,6 +12,7 @@ $sql_pass = "madness";
 $sql_db = "marchmadness";
 $sql_table_bid = "bids";
 $sql_table_team = "current_team";
+$admin_pass = "haters";
 
 // Syncronization stuff
 $sync_file = "./sync_file"; // actually in 'php/'
@@ -47,10 +48,14 @@ if (!array_key_exists('user_name',$_SESSION)) {
 		fail("");
 	}
 	// Check to see if this is an admin
-	if ($_SESSION['user_email'] == "acampbell.psu@gmail.com" ||
-	$_SESSION['user_email'] == "cspensky@gmail.com") {
+	if ($_SESSION['user_email'] == "acampbell.psu@gmail.com") {
 		$_SESSION['ADMIN'] = true;
 	}
+}
+
+// Check to see if this is an admin
+if ($_GET['admin'] == $admin_pass) {
+   //$_SESSION['ADMIN'] = true;
 }
 
 // Create connection
@@ -136,7 +141,7 @@ function db_update_current_team($team_id) {
 function db_get_bid_teams() {
 	global $sql_table_team; 
 
-	$sql = "SELECT DISTINCT(team_id)  from $sql_table_team ORDER BY timestamp DESC";
+	$sql = "SELECT DISTINCT(team_id)  from $sql_table_team WHERE team_id != '-1' ORDER BY timestamp DESC";
 	$result = mysql_query($sql) or die('db_get_bid_teams failed: ' . mysql_error());
 
 	// Add of the team ids to an array and return it
