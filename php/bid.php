@@ -18,7 +18,7 @@ db_lock();
 
 // Get our data to write to the table
 $name = $_SESSION['user_name'];
-$amount = @mysql_real_escape_string($_POST['amount']);
+$amount = intval($_POST['amount']);
 $team_id = db_get_current_team_id();
 
 // Get the current bid
@@ -34,7 +34,7 @@ if ($team_id == -1) {
 } else if ($amount < $current_bid['amount']+$BID_INCREMENT) {
 
 	// Did they bid enough to beat the maximum bid?
-	echo '{"status": 0, "msg":"Sorry, '.$current_bid['name'].' currently has the high bid at $'.$current_bid['amount'].'."}';
+	echo '{"status": 0, "msg":"Sorry, '.$current_bid['name'].' currently has the high bid at $'.$current_bid['amount'].' (Bid more than $'.$_POST['amount'].')"}';
 
 }  else {
 	db_update_bid($team_id, $name, $amount);

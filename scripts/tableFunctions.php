@@ -28,10 +28,10 @@ function build_table($fileName) {
 	if (($handle = fopen($fileName, "r")) !== FALSE) {
 		while (($data = fgetcsv($handle, 1024, ",", '"', '"')) !== FALSE) {
 			$team[$row]   = $data[0];
-			$seed[$row]   = $data[1];
-			$region[$row] = $data[2];
-			$image[$row]  = $data[3];
-			$color[$row]  = $data[4];
+			$seed[$row]   = $data[2];
+			$region[$row] = $data[3];
+			$image[$row]  = $data[4];
+			$color[$row]  = $data[5];
 			$row++;
 		}		
 		// Close file
