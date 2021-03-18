@@ -27,11 +27,11 @@ function build_table($fileName) {
 	$row = 1;
 	if (($handle = fopen($fileName, "r")) !== FALSE) {
 		while (($data = fgetcsv($handle, 1024, ",", '"', '"')) !== FALSE) {
-			$team[$row]   = $data[1];
-			$seed[$row]   = $data[2];
-			$region[$row] = $data[3];
-			$image[$row]  = $data[4];
-			$color[$row]  = $data[5];
+			$team[$row]   = $data[0];
+			$seed[$row]   = $data[1];
+			$region[$row] = $data[2];
+			$image[$row]  = $data[3];
+			$color[$row]  = $data[4];
 			$row++;
 		}		
 		// Close file
@@ -53,15 +53,15 @@ function build_table($fileName) {
 	// Fill initial bids based on scale
 	foreach($table["seed"] as $key => $value) {
 		if ($value == 1 || $value == 2){
-			$table["initBid"][$key] = "\$20";
+			$table["initBid"][$key] = "20";
 		} elseif ($value == 3 || $value == 4) {
-			$table["initBid"][$key] = "\$10";
+			$table["initBid"][$key] = "10";
 		} elseif ($value >= 5 && $value <= 8) {
-			$table["initBid"][$key] = "\$5";
+			$table["initBid"][$key] = "5";
 		} elseif ($value >= 9 && $value <= 12) {
-			$table["initBid"][$key] = "\$3";
+			$table["initBid"][$key] = "3";
 		} else {
-			$table["initBid"][$key] = "\$1";
+			$table["initBid"][$key] = "1";
 		} // end if-else
 	} // end foreach
 
