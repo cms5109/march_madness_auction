@@ -88,7 +88,7 @@ function db_close() {
 // Lock our db tables
 function db_lock() {
 	global $link, $sql_table_bid;
-	mysqli_query($link, "lock table $sql_table_bid");
+	mysqli_query($link, "lock table $sql_table_bid WRITE");
 }
 
 // Return the current highest bid
