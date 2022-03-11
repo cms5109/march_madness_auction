@@ -1,20 +1,29 @@
 <?php
 //error_reporting (E_ALL);
-//ini_set('display_errors', 1);
+ini_set('display_errors', 1);
 include('static_arrays.php');
 
 session_start();
 
 // Mysql stuff
-$admin_email = "acampbell.psu@gmail.com";
-$servername = "localhost";
-$sql_user = "march";
-$sql_pass = "madness";
-$sql_db = "marchmadness";
-$sql_table_bid = "bids";
-$sql_table_team = "current_team";
-$admin_pass = "haters";
-$link = "";
+// $admin_email = "acampbell.psu@gmail.com";
+// $servername = "localhost";
+// $sql_user = "march";
+// $sql_pass = "madness";
+// $sql_db = "marchmadness";
+// $sql_table_bid = "bids";
+// $sql_table_team = "current_team";
+// $admin_pass = "haters";
+// $link = "";
+
+//Get Heroku ClearDB connection information
+$cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$cleardb_server = $cleardb_url["host"];
+$cleardb_username = $cleardb_url["user"];
+$cleardb_password = $cleardb_url["pass"];
+$cleardb_db = substr($cleardb_url["path"],1);
+$active_group = 'default';
+$query_builder = TRUE;
 
 // Syncronization stuff
 $sync_file = "./sync_file"; // actually in 'php/'
@@ -63,8 +72,8 @@ if (!array_key_exists('user_name',$_SESSION)) {
 // Create connection
 function db_connect() {
 	global $link, $sql_user, $sql_pass, $sql_db, $sql_table_bid;
-	$link = @mysqli_connect('localhost', $sql_user, $sql_pass)
-	    or die('Could not connect: ' . mysqli_error($link));
+	$link = $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+	    or die('Could not connect: ' . mysqli_error($cleardb_server));
 	mysqli_select_db($link, $sql_db) or die('Could not select database');
 }
 
