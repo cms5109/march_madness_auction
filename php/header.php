@@ -11,8 +11,8 @@ session_start();
 // $sql_user = "march";
 // $sql_pass = "madness";
 // $sql_db = "marchmadness";
-// $sql_table_bid = "bids";
-// $sql_table_team = "current_team";
+$sql_table_bid = "bids";
+$sql_table_team = "current_team";
 // $admin_pass = "haters";
 // $link = "";
 
@@ -71,10 +71,10 @@ if (!array_key_exists('user_name',$_SESSION)) {
 
 // Create connection
 function db_connect() {
-	global $link, $sql_user, $sql_pass, $sql_db, $sql_table_bid;
+	global $cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db, $sql_table_bid;
 	 $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db)
 	    or die('Could not connect: ' . mysqli_error($cleardb_server));
-	mysqli_select_db($link, $sql_db) or die('Could not select database');
+	mysqli_select_db($cleardb_server, $cleardb_db) or die('Could not select database');
 }
 
 // Close our connection
