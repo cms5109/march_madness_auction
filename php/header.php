@@ -6,7 +6,7 @@ include('static_arrays.php');
 session_start();
 
 // Mysql stuff
-// $admin_email = "acampbell.psu@gmail.com";
+$admin_email = "acampbell.psu@gmail.com";
 // $servername = "localhost";
 // $sql_user = "march";
 // $sql_pass = "madness";
