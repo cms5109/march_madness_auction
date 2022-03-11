@@ -72,9 +72,9 @@ if (!array_key_exists('user_name',$_SESSION)) {
 // Create connection
 function db_connect() {
 	global $cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db, $sql_table_bid;
-	 $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db)
+	 $link = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db)
 	    or die('Could not connect: ' . mysqli_error($cleardb_server));
-	mysqli_select_db($conn, $cleardb_db) or die('Could not select database');
+	mysqli_select_db($link, $cleardb_db) or die('Could not select database');
 }
 
 // Close our connection
