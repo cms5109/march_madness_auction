@@ -32,10 +32,10 @@ if ($team_id == -1) {
 		"bidtime":"'.$bid['timestamp'].'",
 		"highestbidder":"The House",
 		"previousteamimage":"teamImages/prevYearWinner.jpg",
-		"previousteam":"University of Virginia",
-		"previousteamcolor":"",
-		"previousbidamount":"$450",
-		"previoushighestbidder":"Kevin Dubina"}';
+		"previousteam":"Baylor University",
+		"previousteamcolor":"#2B4C35",
+		"previousbidamount":"$185",
+		"previoushighestbidder":"Jon Krause"}';
 	exit;
 }
 // Return a JSON object
