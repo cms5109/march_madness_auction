@@ -10,8 +10,8 @@ $sql_pass = "";
 $sql_db = "calcutta_info";
 $sql_table_player = "player_info";
 $sql_table_info = "team_info";
-$sql_table_team = "team_2019";
-$sql_year = "2019";
+$sql_table_team = "team_2022";
+$sql_year = "2022";
 
 //$teamInfo = build_table_db();
 //$userInfo = build_acl_db();
