@@ -67,7 +67,7 @@ function build_table($fileName) {
 
 	// Fill opponent key
 	foreach($table["seed"] as $key => $value) {
-		$opp_seed = 17 - $value;
+		$opp_seed = 17 - intval($value);
 		$opp_seed_key_array = array_keys($table["seed"], $opp_seed);
 		foreach($opp_seed_key_array as $opp_seed_key) {
 			if ($table["region"][$key] == $table["region"][$opp_seed_key]) {
