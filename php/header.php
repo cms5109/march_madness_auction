@@ -30,7 +30,7 @@ $query_builder = TRUE;
 use Platformsh\ConfigReader\Config;
 $config = new Config();
 $credentials = $config->credentials('database');
-$platform_server = $credentials['host'];
+$platform_server = $credentials['hostname'];
 $platform_port = $credentials['port'];
 $platform_path = $credentials['path'];
 $platform_username = $credentials['username'];
