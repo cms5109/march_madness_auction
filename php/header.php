@@ -25,6 +25,18 @@ $cleardb_db = substr($cleardb_url["path"],1);
 $active_group = 'default';
 $query_builder = TRUE;
 
+
+//Trying platform SH stuff
+use Platformsh\ConfigReader\Config;
+$config = new Config();
+$credentials = $config->credentials('database');
+$platform_host = $credentials['host'];
+$platform_port = $credentials['port'];
+$platform_path = $credentials['path'];
+$platform_username = $credentials['username'];
+$platform_password = $credentials['password'];
+
+
 // Syncronization stuff
 $sync_file = "./sync_file"; // actually in 'php/'
 
@@ -71,10 +83,15 @@ if (!array_key_exists('user_name',$_SESSION)) {
 
 // Create connection
 function db_connect() {
-	global $link, $cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db, $sql_table_bid;
-	 $link = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db)
-	    or die('Could not connect: ' . mysqli_error($cleardb_server));
-	mysqli_select_db($link, $cleardb_db) or die('Could not select database');
+	// global $link, $cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db, $sql_table_bid;
+	//  $link = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db)
+	//     or die('Could not connect: ' . mysqli_error($cleardb_server));
+	// mysqli_select_db($link, $cleardb_db) or die('Could not select database');
+
+	global $link, $platform_server, $platform_username, $platform_password, $platform_db, $sql_table_bid;
+	  $link = mysqli_connect($platform_server, $platform_username, $platform_password, $platform_db)
+	     or die('Could not connect: ' . mysqli_error($platform_server));
+	 mysqli_select_db($link, $platform_db) or die('Could not select database');
 }
 
 // Close our connection
