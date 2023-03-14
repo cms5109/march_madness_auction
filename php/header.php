@@ -27,14 +27,14 @@ $query_builder = TRUE;
 
 
 //Trying platform SH stuff
-use Platformsh\ConfigReader\Config;
-$config = new Config();
+//use Platformsh\ConfigReader\Config;
+//$config = new Config();
 $credentials = $config->credentials('database');
-$platform_server = $credentials['hostname'];
-$platform_port = $credentials['port'];
-$platform_path = $credentials['path'];
-$platform_username = $credentials['username'];
-$platform_password = $credentials['password'];
+$platform_server = "a6iqkwgjbmcxwv3wzxerspvmoe.db.service._.us-2.platformsh.site"; //$credentials['hostname'];
+$platform_port = "3306"; //$credentials['port'];
+$platform_path = "main"; //$credentials['path'];
+$platform_username = "user"; //$credentials['username'];
+$platform_password = ""; //$credentials['password'];
 $platform_db = "main";
 
 
