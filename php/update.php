@@ -14,10 +14,8 @@ db_connect();
 
 // Get our team id
 $team_id = db_get_current_team_id();
-// Get the id of their opponent
-$opponent_id = $teamInfo['opp_key'][$team_id];
-// Get the current bid info
-$bid = db_get_current_bid($team_id);
+
+// If draft has restarted, team_id=-1, update to initial display page
 if ($team_id == -1) {
 	echo '{	
 		"sync_value":"'.$sync_value.'",
@@ -38,6 +36,12 @@ if ($team_id == -1) {
 		"previoushighestbidder":"Bill Powell"}';
 	exit;
 }
+
+// Get the id of their opponent
+$opponent_id = $teamInfo['opp_key'][$team_id];
+// Get the current bid info
+$bid = db_get_current_bid($team_id);
+
 // Return a JSON object
 echo '{	
 		"sync_value":"'.$sync_value.'",
