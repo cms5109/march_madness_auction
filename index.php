@@ -104,7 +104,7 @@ if (isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == true) {
 	echo "<button style='margin:1%;font-size:18pt;font-weight:bold;' onclick='restartDraft();'>Restart Draft</button><BR>";
 }
 ?>
-	Created by: <a href="https://github.com/cspensky/march_madness_auction">Chad and Alan</a>, v3.4 (2023).<BR>
+	Created by: <a href="https://github.com/cspensky/march_madness_auction">Chad, Conal, and Alan</a>, v3.4 (2023).<BR>
 </div>
 
 <div id="popup">
