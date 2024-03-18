@@ -1,64 +1,64 @@
-Purdue University,1,1,East,Purdue.png,#A3792C,
-Marquette University,1,2,East,Marquette.png,#003366,
-Kansas State University,1,3,East,KSU.png,#512888,
-University of Tennessee,1,4,East,Tenn.png,#FF8200,
-Duke University,1,5,East,Duke.png,#001A57,
-University of Kentucky,1,6,East,UK.png,#005DAA,
-Michigan State University,1,7,East,MichSt.png,#18453B,
-University of Memphis,1,8,East,Memphis.png,#003893,
-Florida Atlantic University,1,9,East,FAU.png,#003366,
-University of Southern California,1,10,East,USC.png,#990000,
-Providence College,1,11,East,Prov.png,#000000,
-Oral Roberts University,1,12,East,ORU.png,#002F60,
-University of Louisiana at Lafayette,1,13,East,ULL.png,#A00B0B,
-Montana State University,1,14,East,MontSt.png,#003F7F,
-University of Vermont,1,15,East,UVM.png,#007155,
-Fairleigh Dickinson/Texas Southern,1,16,East,NCAA.png,#000000,
-University of Houston,1,1,Midwest,Houston.png,#C8102E,
-University of Texas at Austin,1,2,Midwest,UTex.png,#BF5700,
-Xavier University,1,3,Midwest,Xavier.png,#002857,
-Indiana University Bloomington,1,4,Midwest,IU.png,#7D110C,
-University of Miami,1,5,Midwest,Miami.png,#F47321,
-Iowa State University,1,6,Midwest,ISU.png,#CC0000,
-Texas A&M University,1,7,Midwest,TAMU.png,#500000,
-University of Iowa,1,8,Midwest,Iowa.png,#000000,
-Auburn University,1,9,Midwest,Auburn.png,#0C2340,
-Pennsylvania State University,1,10,Midwest,PSU.png,#002654,
-Mississippi St./Pitt,1,11,Midwest,NCAA.png,#000000,
-Drake University,1,12,Midwest,Drake.png,#004477,
-Kent State University,1,13,Midwest,KentSt.png,#002664,
-Kennesaw State University,1,14,Midwest,KennSt.png,#FFC629,
-Colgate University,1,15,Midwest,Colgate.png,#821019,
-Northern Kentucky University,1,16,Midwest,NKU.png,#FFC72C,
-University of Alabama,1,1,South,Bama.png,#990000,
-University of Arizona,1,2,South,Zona.png,#003366,
-Baylor University,1,3,South,Baylor.png,#2B4C3F,
-University of Virginia,1,4,South,UVa.png,#003F87,
-San Diego State University,1,5,South,SDSU.png,#000000,
-Creighton University,1,6,South,Creighton.png,#3C4982,
-University of Missouri,1,7,South,Mizzou.png,#000000,
-"University of Maryland, College Park",1,8,South,UMd.png,#CE1126,
-West Virginia University,1,9,South,WVU.png,#002855,
-Utah State University,1,10,South,UtahSt.png,#0F2439,
-North Carolina State University,1,11,South,NCSt.png,#CC0000,
-College of Charleston,1,12,South,Charleston.png,#660000,
-Furman University,1,13,South,Furman.png,#4F2170,
-"University of California, Santa Barbara",1,14,South,UCSB.png,#003660,
-Princeton University,1,15,South,Princeton.png,#EE7F2D,
-"Texas A&M, Corpus Christi/SE Missouri St.",1,16,South,NCAA.png,#000000,
-University of Kansas,1,1,West,Kansas.png,#0022B4,
-"University of California, Los Angeles",1,2,West,UCLA.png,#3284BF,
-Gonzaga University,1,3,West,Zaga.png,#003366,
-University of Connecticut,1,4,West,UConn.png,#000E2F,
-Saint Mary's College of California,1,5,West,StMarys.png,#CC2D30,
-Texas Christian University,1,6,West,TCU.png,#4D1979,
-Northwestern University,1,7,West,NW.png,#4E2A84,
-University of Arkansas,1,8,West,UArk.png,#9D2235,
-"University of Illinois at Urbana, Champaign",1,9,West,UIUC.png,#FA6300,
-Boise State University,1,10,West,BoiseSt.png,#0038A8,
-Arizona State/Nevada,1,11,West,NCAA.png,#000000,
-Virginia Commonwealth University,1,12,West,VCU.png,#F8B800,
-Iona College,1,13,West,Iona.png,#910026,
-Grand Canyon University,1,14,West,GCU.png,#522398,
-University of North Carolina at Asheville,1,15,West,UNCAshe.png,#003F87,
-Howard University,1,16,West,Howard.png,#003A63,
+University of Connecticut,1,1,East,UConn.png,#000E2F
+Iowa State University,1,2,East,ISU.png,#CC0000
+"University of Illinois at Urbana, Champaign",1,3,East,UIUC.png,#FA6300
+Auburn University,1,4,East,Auburn.png,#0C2340
+San Diego State University,1,5,East,SDSU.png,#000000
+Brigham Young University,1,6,East,BYU.png,#002255
+Washington State University,1,7,East,Wazzu.png,#981E32
+Florida Atlantic University,1,8,East,FAU.png,#003366
+Northwestern University,1,9,East,NW.png,#4E2A84
+Drake University,1,10,East,Drake.png,#004477
+Duquesne University,1,11,East,Duquesne.png,#BA0C2F
+University of Alabama at Birmingham,1,12,East,UAB.png,#1E6B52
+Yale University,1,13,East,Yale.png,#00356B
+Morehead State University,1,14,East,Morehead.png,#005EB8
+South Dakota State University,1,15,East,SDakSt.png,#003893
+Stetson University,1,16,East,Stetson.png,#00523E
+Purdue University,1,1,Midwest,Purdue.png,#A3792C
+University of Tennessee,1,2,Midwest,Tenn.png,#FF8200
+Creighton University,1,3,Midwest,Creighton.png,#3C4982
+University of Kansas,1,4,Midwest,Kansas.png,#0022B4
+Gonzaga University,1,5,Midwest,Zaga.png,#003366
+University of South Carolina,1,6,Midwest,SouthCarolina.png,#8C2633
+University of Texas at Austin,1,7,Midwest,UTex.png,#BF5700
+Utah State University,1,8,Midwest,UtahSt.png,#0F2439
+Texas Christian University,1,9,Midwest,TCU.png,#4D1979
+Virgina/Colorado St.,1,10,Midwest,NCAA.png,#003F87
+University of Oregon,1,11,Midwest,Oregon.png,#154733
+McNeese State University,1,12,Midwest,McNeese.png,#003087
+Samford University,1,13,Midwest,Samford.png,#0C2340
+University of Akron,1,14,Midwest,Akron.png,#00285E
+Saint Peter's University,1,15,Midwest,StPetes.png,#003C71
+Montana St./Grambling St.,1,16,Midwest,NCAA.png,#003F7F
+University of Houston,1,1,South,Houston.png,#C8102E
+Marquette University,1,2,South,Marquette.png,#003366
+University of Kentucky,1,3,South,UK.png,#005DAA
+Duke University,1,4,South,Duke.png,#001A57
+"University of Wisconsin, Madison",1,5,South,Wisky.png,#B70101
+Texas Tech University,1,6,South,TexasTech.png,#CC0000
+University of Florida,1,7,South,UF.png,#FA4616
+"University of Nebraska, Lincoln",1,8,South,Nebraska.png,#D00000
+Texas A&M University,1,9,South,TAMU.png,#500000
+Colorado/Boise St.,1,10,South,NCAA.png,#CFB87C
+North Carolina State University,1,11,South,NCSt.png,#CC0000
+James Madison University,1,12,South,JMU.png,#450084
+University of Vermont,1,13,South,UVM.png,#007155
+Oakland University,1,14,South,Oakland.png,#BC945B
+Western Kentucky University,1,15,South,WKU.png,#B01E24
+Longwood University,1,16,South,Longwood.png,#002147
+University of North Carolina at Chapel Hill,1,1,West,UNC.png,#56A0D3
+University of Arizona,1,2,West,Zona.png,#003366
+Baylor University,1,3,West,Baylor.png,#2B4C3F
+University of Alabama,1,4,West,Bama.png,#990000
+Saint Mary's College of California,1,5,West,StMarys.png,#CC2D30
+Clemson University,1,6,West,Clemson.png,#F66733
+University of Dayton,1,7,West,Dayton.png,#CE1141
+Mississippi State University,1,8,West,MissSt.png,#660000
+Michigan State University,1,9,West,MichSt.png,#18453B
+"University of Nevada, Reno",1,10,West,UNR.png,#003366
+University of New Mexico,1,11,West,UNM.png,#BA0C2F
+Grand Canyon University,1,12,West,GCU.png,#522398
+College of Charleston,1,13,West,Charleston.png,#660000
+Colgate University,1,14,West,Colgate.png,#821019
+"California State University, Long Beach",1,15,West,CSULB.png,#FFC61E
+Howard/Wagner,1,16,West,NCAA.png,#003A63
