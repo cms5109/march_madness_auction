@@ -1,7 +1,7 @@
 var lastData = "";
 var sync_value = -1;
 var current_team = "";
-var deadline = new Date(Date.parse("Mon, 15 Mar 2023 21:00:00 EDT"));
+var deadline = new Date(Date.parse("Mon, 20 Mar 2024 21:00:00 EDT"));
 
 //callback handler for form submit
 $("#bidform").submit(function(e)

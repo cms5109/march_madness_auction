@@ -30,12 +30,12 @@ $query_builder = TRUE;
 //use Platformsh\ConfigReader\Config;
 //$config = new Config();
 //$credentials = $config->credentials('database');
-$platform_server = "192.81.213.165"; //$credentials['hostname'];
+$platform_server = "174.138.70.192"; //$credentials['hostname'];
 $platform_port = "3306"; //$credentials['port'];
 $platform_path = "main"; //$credentials['path'];
-$platform_username = "nqxkwetrty"; //$credentials['username'];
-$platform_password = "kRScd8nGEe"; //$credentials['password'];
-$platform_db = "nqxkwetrty";
+$platform_username = "jcmxgwmtre"; //$credentials['username'];
+$platform_password = "K9gECdvV9x"; //$credentials['password'];
+$platform_db = "jcmxgwmtre";
 
 
 // Syncronization stuff
