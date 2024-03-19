@@ -30,10 +30,10 @@ if ($team_id == -1) {
 		"bidtime":"'.$bid['timestamp'].'",
 		"highestbidder":"The House",
 		"previousteamimage":"teamImages/prevYearWinner.jpg",
-		"previousteam":"University of Kansas",
-		"previousteamcolor":"#0022B4",
-		"previousbidamount":"$283",
-		"previoushighestbidder":"Bill Powell"}';
+		"previousteam":"University of Connecticut",
+		"previousteamcolor":"#000E2F",
+		"previousbidamount":"$123",
+		"previoushighestbidder":"Kevin Dubina"}';
 	exit;
 }
 
